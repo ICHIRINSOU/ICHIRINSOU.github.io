@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+    <title type="text">僕と花</title>
+    <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
+    <updated>2021-06-22T01:50:29&#43;08:00</updated>
+    <id>https://ichirinsou.github.io/</id>
+    <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
+    <author>
+            <name>Hiillos</name>
+            <uri>https://ichirinsou.github.io/</uri>
+            
+                <email>evie.hiillos@gmail.com</email>
+            </author>
+    
+    <generator uri="https://gohugo.io/" version="0.83.1">Hugo</generator>
+        <entry>
+            <title type="text">我与花与爱丽丝</title>
+            <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/life/boku-to-hana/" />
+            <id>https://ichirinsou.github.io/life/boku-to-hana/</id>
+            <updated>2021-06-21T19:50:46&#43;08:00</updated>
+            <published>2021-06-21T19:02:52&#43;08:00</published>
+            <author>
+                    <name>Hiillos</name>
+                    <uri>https://ichirinsou.github.io/</uri>
+                    <email>evie.hiillos@gmail.com</email>
+                    </author>
+            <summary type="html">6.21是这个blog的生日🎂！ 搭建它的时候一直在听 SHINSEKAI 和 僕と花 「僕と君なら きっと越え……</summary>
+            
+                <content type="html">&lt;p&gt;&lt;img src=&#34;https://ichirinsou.github.io/images/hana.jpg&#34; alt=&#34;boku to hana&#34; title=&#34;photo by Scott Webb&#34;&gt;&lt;/p&gt;
+&lt;p&gt;6.21是这个blog的生日🎂！&lt;/p&gt;
+&lt;p&gt;搭建它的时候一直在听 &lt;strong&gt;SHINSEKAI&lt;/strong&gt; 和 &lt;strong&gt;僕と花&lt;/strong&gt;&lt;/p&gt;
+&lt;iframe 
+    frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; 
+    marginheight=&#34;0&#34; width=330 height=86 
+    src=&#34;https://ichirinsou.github.io////music.163.com/outchain/player?type=2&amp;id=1446799335&amp;auto=0&amp;height=66&#34;&gt;
+&lt;/iframe&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;「僕と君なら　きっと越えて行けるさ」&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“如果是我和你的话 一定能度过难关吧”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;そう言った君の声が　細く震えていたんだ&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;你在这么说的时候 声音微微颤抖着&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;君と描きたいのさ　揺れた線でいいから&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;想要和你一起描绘 哪怕是扭曲的线条也没关系&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;明日の朝あたり　世界を変えにいこうかね&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;从明天早晨开始 试着去改变世界吧&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;iframe 
+    frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; 
+    marginheight=&#34;0&#34; width=330 height=86 
+    src=&#34;https://ichirinsou.github.io////music.163.com/outchain/player?type=2&amp;id=548556499&amp;auto=0&amp;height=66&#34;&gt;
+&lt;/iframe&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;何にも言わない僕は花&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;什么都不说的我是花儿&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;通り過ぎる人にサヨナラ&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;与来来往往的人再见&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;del&gt;好家伙新世界因为是危挨批外链拉出来害不能听😓&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;为什么会叫我与花与爱丽丝？因为僕と花 + 花与爱丽丝 ⬅️是室友的微信名&lt;/p&gt;
+&lt;p&gt;准备回家啦！&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://ichirinsou.github.io/life/" term="life" label="life" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://ichirinsou.github.io/tags/essay/" term="essay" label="essay" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>

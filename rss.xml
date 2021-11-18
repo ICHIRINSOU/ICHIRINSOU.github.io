@@ -21,15 +21,15 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Wed, 25 Aug 2021 10:52:10 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 18 Nov 2021 23:40:09 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
         
             <item>
                 <title>这个七月，又难过又快乐</title>
-                <link>https://ichirinsou.github.io/life/mid-july/</link>
-                <guid isPermaLink="true">https://ichirinsou.github.io/life/mid-july/</guid>
+                <link>https://ichirinsou.github.io/life/210719/</link>
+                <guid isPermaLink="true">https://ichirinsou.github.io/life/210719/</guid>
                 <pubDate>Mon, 19 Jul 2021 03:11:20 &#43;0800</pubDate>
                 
                     <author>evie.hiillos@gmail.com (Hiillos)</author>
@@ -82,9 +82,9 @@
             </item>
         
             <item>
-                <title>CSS合辑</title>
-                <link>https://ichirinsou.github.io/tech/css-collection/</link>
-                <guid isPermaLink="true">https://ichirinsou.github.io/tech/css-collection/</guid>
+                <title>CSS基础知识合辑</title>
+                <link>https://ichirinsou.github.io/tech/210711/</link>
+                <guid isPermaLink="true">https://ichirinsou.github.io/tech/210711/</guid>
                 <pubDate>Sun, 11 Jul 2021 04:26:22 &#43;0800</pubDate>
                 
                     <author>evie.hiillos@gmail.com (Hiillos)</author>
@@ -161,8 +161,8 @@
         
             <item>
                 <title>HTML重点标签</title>
-                <link>https://ichirinsou.github.io/tech/important-html/</link>
-                <guid isPermaLink="true">https://ichirinsou.github.io/tech/important-html/</guid>
+                <link>https://ichirinsou.github.io/tech/210625/</link>
+                <guid isPermaLink="true">https://ichirinsou.github.io/tech/210625/</guid>
                 <pubDate>Fri, 25 Jun 2021 03:23:20 &#43;0800</pubDate>
                 
                     <author>evie.hiillos@gmail.com (Hiillos)</author>
@@ -512,8 +512,8 @@
         
             <item>
                 <title>HTML入门指南</title>
-                <link>https://ichirinsou.github.io/tech/prime-html/</link>
-                <guid isPermaLink="true">https://ichirinsou.github.io/tech/prime-html/</guid>
+                <link>https://ichirinsou.github.io/tech/210621/</link>
+                <guid isPermaLink="true">https://ichirinsou.github.io/tech/210621/</guid>
                 <pubDate>Mon, 21 Jun 2021 19:55:49 &#43;0800</pubDate>
                 
                     <author>evie.hiillos@gmail.com (Hiillos)</author>
@@ -641,8 +641,8 @@
         
             <item>
                 <title>我与花与爱丽丝</title>
-                <link>https://ichirinsou.github.io/life/boku-to-hana/</link>
-                <guid isPermaLink="true">https://ichirinsou.github.io/life/boku-to-hana/</guid>
+                <link>https://ichirinsou.github.io/life/210621/</link>
+                <guid isPermaLink="true">https://ichirinsou.github.io/life/210621/</guid>
                 <pubDate>Mon, 21 Jun 2021 19:02:52 &#43;0800</pubDate>
                 
                     <author>evie.hiillos@gmail.com (Hiillos)</author>

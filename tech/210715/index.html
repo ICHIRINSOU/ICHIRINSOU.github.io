@@ -12,7 +12,7 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>CSS基础知识合辑 | 僕と花</title>
+    <title>CSS动画入门 | 僕と花</title>
 
     <link rel="stylesheet" href="/css/meme.min.694160bc541ffcb01e6ec33f0d2659bac5d7a4cf64b378fe7c0dabfb28f9811f.css"/>
 
@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="Hiillos" /><meta name="description" content="稍微整理些CSS中的要点，尽量简洁扼要，慢慢施工👷中…… 盒模型（BoxModel） C……" />
+    <meta name="author" content="Hiillos" /><meta name="description" content="基础浏览器渲染原理 渲染步骤 更新样式 开发中，一般通过JS来更新样式 例如： 1 2 3 4 div.style.background = &#39;red&#39;……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -46,22 +46,22 @@
     
 
     
-    <link rel="canonical" href="https://ichirinsou.github.io/tech/210711/" />
+    <link rel="canonical" href="https://ichirinsou.github.io/tech/210715/" />
     
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "datePublished": "2021-07-11T04:26:22+08:00",
-        "dateModified": "2021-11-20T21:30:47+08:00",
-        "url": "https://ichirinsou.github.io/tech/210711/",
-        "headline": "CSS基础知识合辑",
-        "description": "稍微整理些CSS中的要点，尽量简洁扼要，慢慢施工👷中…… 盒模型（BoxModel） C……",
+        "datePublished": "2021-07-15T20:39:45+08:00",
+        "dateModified": "2021-11-24T04:31:17+08:00",
+        "url": "https://ichirinsou.github.io/tech/210715/",
+        "headline": "CSS动画入门",
+        "description": "基础浏览器渲染原理 渲染步骤 更新样式 开发中，一般通过JS来更新样式 例如： 1 2 3 4 div.style.background = 'red'……",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  672 ,
-        "image": ["https://ichirinsou.github.io/images/boxmodel.png","https://ichirinsou.github.io/images/boxmodel-1.png","https://ichirinsou.github.io/images/boxmodel-2.png"],
+        "wordCount":  1211 ,
+        "image": ["https://ichirinsou.github.io/images/render.png","https://ichirinsou.github.io/images/method1.png","https://ichirinsou.github.io/images/method2.png","https://ichirinsou.github.io/images/method3.png"],
         "author": {
             "@type": "Person",
             "description": "Hurricane, hurricane 🥀",
@@ -92,14 +92,14 @@
 
 
 
-<meta property="og:title" content="CSS基础知识合辑" />
-<meta property="og:description" content="稍微整理些CSS中的要点，尽量简洁扼要，慢慢施工👷中…… 盒模型（BoxModel） C……" />
-<meta property="og:url" content="https://ichirinsou.github.io/tech/210711/" />
+<meta property="og:title" content="CSS动画入门" />
+<meta property="og:description" content="基础浏览器渲染原理 渲染步骤 更新样式 开发中，一般通过JS来更新样式 例如： 1 2 3 4 div.style.background = &#39;red&#39;……" />
+<meta property="og:url" content="https://ichirinsou.github.io/tech/210715/" />
 <meta property="og:site_name" content="僕と花" />
-<meta property="og:locale" content="zh" /><meta property="og:image" content="https://ichirinsou.github.io/images/boxmodel.png" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://ichirinsou.github.io/images/render.png" />
 <meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2021-07-11T04:26:22&#43;08:00" />
-    <meta property="article:modified_time" content="2021-11-20T21:30:47&#43;08:00" />
+    <meta property="article:published_time" content="2021-07-15T20:39:45&#43;08:00" />
+    <meta property="article:modified_time" content="2021-11-24T04:31:17&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -191,7 +191,7 @@
 
         <article class="content post h-entry" data-align="justify" data-type="tech" data-toc-num="true">
 
-            <h1 class="post-title p-name">CSS基础知识合辑</h1>
+            <h1 class="post-title p-name">CSS动画入门</h1>
 
             
 
@@ -205,11 +205,11 @@
 <div class="post-meta">
     
         
-        <time datetime="2021-07-11T04:26:22&#43;08:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2021.7.11</time>
+        <time datetime="2021-07-15T20:39:45&#43;08:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2021.7.15</time>
     
     
         
-        <time datetime="2021-11-20T21:30:47&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.11.20</time>
+        <time datetime="2021-11-24T04:31:17&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.11.24</time>
     
     
     
@@ -240,7 +240,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;672</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1211</span>
     
     
     
@@ -251,53 +251,243 @@
 
             <nav class="contents">
   <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
-    <li><a id="contents:盒模型boxmodel" href="#盒模型boxmodel">盒模型（BoxModel）</a>
+    <li><a id="contents:基础浏览器渲染原理" href="#基础浏览器渲染原理">基础浏览器渲染原理</a>
       <ol>
-        <li><a id="contents:标准盒模型" href="#标准盒模型">标准盒模型</a></li>
-        <li><a id="contents:怪异盒模型" href="#怪异盒模型">怪异盒模型</a></li>
-        <li><a id="contents:box-sizing" href="#box-sizing">box-sizing</a></li>
+        <li><a id="contents:渲染步骤" href="#渲染步骤">渲染步骤</a></li>
+        <li><a id="contents:更新样式" href="#更新样式">更新样式</a></li>
       </ol>
     </li>
-    <li><a id="contents:文档流" href="#文档流">文档流</a></li>
-    <li><a id="contents:布局方式" href="#布局方式">布局方式</a></li>
+    <li><a id="contents:css动画实现方式" href="#css动画实现方式">CSS动画实现方式</a>
+      <ol>
+        <li><a id="contents:transition" href="#transition">transition</a></li>
+        <li><a id="contents:animation" href="#animation">animation</a></li>
+      </ol>
+    </li>
   </ol>
 </nav><div class="post-body e-content">
-                <p>稍微整理些CSS中的要点，尽量简洁扼要，慢慢施工👷中……</p>
-<h2 id="盒模型boxmodel"><a href="#盒模型boxmodel" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:盒模型boxmodel" class="headings">盒模型（BoxModel）</a></h2>
+                <h2 id="基础浏览器渲染原理"><a href="#基础浏览器渲染原理" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:基础浏览器渲染原理" class="headings">基础浏览器渲染原理</a></h2>
 <hr>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model" target="_blank" rel="noopener"><strong>CSS基础盒模型</strong></a>即封装了HTML元素的矩形盒子。CSS决定这些盒子的大小、位置及各类样式属性。</p>
-<p>每个盒子由四个部分组成：content（内容）、padding（内边距）、border（边框）、margin（外边距）。</p>
-<p><img src="/images/boxmodel.png" alt="Box Model"><span class="caption">◎ 盒模型</span></p>
 <ol>
 <li>
-<h3 id="标准盒模型"><a href="#标准盒模型" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:标准盒模型" class="headings">标准盒模型</a></h3>
-<p><img src="/images/boxmodel-1.png" alt="Box Model"><span class="caption">◎ 标准盒</span></p>
-<p>W3C标准盒模型（大多数浏览器的渲染方式），该模型下，使用CSS时指定的宽高仅为content区域的宽高，并不包含其它部分。如果指定宽高为100%同时包含其它（padding与border）部分，则会溢出。</p>
+<h3 id="渲染步骤"><a href="#渲染步骤" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:渲染步骤" class="headings">渲染步骤</a></h3>
+<p><img src="/images/render.png" alt="Render"><span class="caption">◎ 浏览器渲染原理</span></p>
 </li>
 <li>
-<h3 id="怪异盒模型"><a href="#怪异盒模型" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:怪异盒模型" class="headings">怪异盒模型</a></h3>
-<p><img src="/images/boxmodel-2.png" alt="Box Model"><span class="caption">◎ 怪异盒</span></p>
-<p>IE盒模型（以IE为内核的浏览器的渲染方式）。该模型下，指定的宽高为content+padding+border的宽高总和。</p>
+<h3 id="更新样式"><a href="#更新样式" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:更新样式" class="headings">更新样式</a></h3>
+<p>开发中，一般通过JS来更新样式</p>
+<p>例如：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="nx">div</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span> 
+<span class="nx">div</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">remove</span><span class="p">()</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>执行代码后，有三种更新方式<br>
+1. <strong>样式更新后，需要重新进行布局，并重新进行绘制及合成</strong>
+<img src="/images/method1.png" alt="method-1">
+例如<code>div.remove()</code>，移除div后，整体布局需要re layout，继而发起后续步骤。
+2. <strong>样式更新后，无需重新进行布局，但需要重新绘制及合成</strong>
+<img src="/images/method2.png" alt="method-2">
+例如<code>div.style.background = 'red' </code>，仅修改了颜色，只触发重绘制及后续步骤。 <br>
+3. <strong>样式更新后，仅进行合成</strong>
+<img src="/images/method3.png" alt="method-3">
+例如改变<code>transform</code>属性，仅需要重合成。</p>
+</li>
+</ol>
+<hr>
+<h2 id="css动画实现方式"><a href="#css动画实现方式" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:css动画实现方式" class="headings">CSS动画实现方式</a></h2>
+<hr>
+<ol>
+<li>
+<h3 id="transition"><a href="#transition" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:transition" class="headings">transition</a></h3>
+<ol>
+<li>
+<p>作用</p>
+<p>过渡，（当存在初始状态与最终状态时）补充中间帧</p>
 </li>
 <li>
-<h3 id="box-sizing"><a href="#box-sizing" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:box-sizing" class="headings">box-sizing</a></h3>
+<p>语法</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition" target="_blank" rel="noopener"><code>transition</code></a>属性可以被指定为一个或多个 CSS 属性的过渡效果，多个属性之间用逗号进行分隔。</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-CSS" data-lang="CSS"><span class="c">/* 属性名 | 时长 */</span>
+<span class="nt">transition</span><span class="o">:</span> <span class="nt">margin-right</span> <span class="nt">4s</span><span class="o">;</span>
+
+<span class="c">/* 属性名 | 时长 | 延迟 */</span>
+<span class="nt">transition</span><span class="o">:</span> <span class="nt">margin-right</span> <span class="nt">4s</span> <span class="nt">1s</span><span class="o">;</span>
+
+<span class="c">/* 属性名 | 时长 | 过渡方式 */</span>
+<span class="nt">transition</span><span class="o">:</span> <span class="nt">margin-right</span> <span class="nt">4s</span> <span class="nt">ease-in-out</span><span class="o">;</span>
+
+<span class="c">/* 属性名 | 时长 | 过渡方式 | 延迟 */</span>
+<span class="nt">transition</span><span class="o">:</span> <span class="nt">margin-right</span> <span class="nt">4s</span> <span class="nt">ease-in-out</span> <span class="nt">1s</span><span class="o">;</span>
+
+<span class="c">/* 可以用逗号,分割两个不同的属性 */</span>
+<span class="nt">transition</span><span class="o">:</span> <span class="nt">margin-right</span> <span class="nt">4s</span><span class="o">,</span> <span class="nt">color</span> <span class="nt">1s</span><span class="o">;</span>
+
+<span class="c">/* 可以用all代替所有属性 */</span>
+<span class="nt">transition</span><span class="o">:</span> <span class="nt">all</span> <span class="nt">0</span><span class="p">.</span><span class="nc">5s</span> <span class="nt">ease-out</span><span class="o">;</span>
+
+<span class="c">/* 全局属性 */</span>
+<span class="nt">transition</span><span class="o">:</span> <span class="nt">inherit</span><span class="o">;</span>
+<span class="nt">transition</span><span class="o">:</span> <span class="nt">initial</span><span class="o">;</span>
+<span class="nt">transition</span><span class="o">:</span> <span class="nt">unset</span><span class="o">;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>详细标准语法规则与示例可前往<a href="https://developer.mozilla.org/zh-CN/docs/Web" target="_blank" rel="noopener"><strong>MDN</strong></a>搜索关键词<code>transition</code>查看✌️</p>
+</li>
+<li>
+<p>注意事项⚠️</p>
+<p>并不是所有的属性都能使用<code>transition</code>过渡</p>
+<ol>
+<li>初始➡️最终状态包含以下两种属性，无法使用transition进行过渡
+<ul>
+<li><code>display: none</code> ↔️ <code>display: block</code></li>
+<li>如果想发生元素从隐藏↔️可视的转变，一般改成<code>visibility: hidden</code> ↔️ <code>visibility: visible</code></li>
+</ul>
+</li>
+<li>background属性可以使用transition过渡</li>
+<li>opacity属性可以使用transition过度</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<h3 id="animation"><a href="#animation" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:animation" class="headings">animation</a></h3>
+<ol>
+<li>
+<p>作用</p>
 <blockquote>
-<p>在 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model" target="_blank" rel="noopener">CSS 盒子模型</a>的默认定义里，你对一个元素所设置的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/width" target="_blank" rel="noopener"><code>width</code></a> 与 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/height" target="_blank" rel="noopener"><code>height</code></a> 只会应用到这个元素的内容区。如果这个元素有任何的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border" target="_blank" rel="noopener"><code>border</code></a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding" target="_blank" rel="noopener"><code>padding</code></a> ，绘制到屏幕上时的盒子宽度和高度会加上设置的边框和内边距值。这意味着当你调整一个元素的宽度和高度时需要时刻注意到这个元素的边框和内边距。当我们实现响应式布局时，这个特点尤其烦人。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation" target="_blank" rel="noopener"><code>animation</code></a>可以将一个CSS样式配置转换到另一个CSS样式配置。动画包括两个部分：描述动画的样式规则和用于指定动画开始、结束以及中间点样式的关键帧。</p>
 </blockquote>
-<p>box-sizing定义如何计算一个元素的总宽度和总高度，是CSS3中新添加的属性，来替换原来的盒模型表达，自由指定盒子的计算方式。</p>
+</li>
+<li>
+<p>语法</p>
 <ol>
-<li><code>box-sizing: content-box;</code> （默认）内容盒，以content的边界作为盒子的边界，即标准盒模型。</li>
-<li><code>box-sizing: border-box;</code> 边框盒，以border的边界作为盒子的边界（包含content+padding+border），即怪异盒模型。</li>
-</ol>
-<p>一般情况下，我们会经常使用<code>border-box</code>这一表达。</p>
+<li>
+<p>样式规则</p>
+<p><code>animation</code>属性或其子属性允许配置动画时间、时长以及其他动画细节，但该属性实际上不能配置动画的实际表现。</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-CSS" data-lang="CSS"><span class="c">/* 时长 | 过渡方式 | 延迟 | 次数 | 方向 | 填充方式 | 是否暂停 | （@keyframes描述的关键帧）名称 */</span>
+<span class="nt">animation</span><span class="o">:</span> <span class="nt">3s</span> <span class="nt">ease-in</span> <span class="nt">1s</span> <span class="nt">2</span> <span class="nt">reverse</span> <span class="nt">both</span> <span class="nt">paused</span> <span class="nt">slidein</span><span class="o">;</span>
+
+<span class="c">/* 时长 | 过渡方式 | 延迟 | （@keyframes描述的关键帧）名称 */</span>
+<span class="nt">animation</span><span class="o">:</span> <span class="nt">3s</span> <span class="nt">linear</span> <span class="nt">1s</span> <span class="nt">slidein</span><span class="o">;</span>
+
+<span class="c">/* 时长 | （@keyframes描述的关键帧）名称 */</span>
+<span class="nt">animation</span><span class="o">:</span> <span class="nt">3s</span> <span class="nt">slidein</span><span class="o">;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>详细标准语法规则与示例可前往<a href="https://developer.mozilla.org/zh-CN/docs/Web" target="_blank" rel="noopener"><strong>MDN</strong></a>搜索关键词<code>animation</code>查看✌️</p>
+</li>
+<li>
+<p>关键帧</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes" target="_blank" rel="noopener"><code>@keyframes</code></a>通过在动画序列中定义关键帧的样式来控制CSS动画序列中的中间步骤。一般来说有两种表达方式：</p>
+<ol>
+<li>
+<p>from to</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-CSS" data-lang="CSS"><span class="p">@</span><span class="k">keyframes</span> <span class="nt">name</span> <span class="p">{</span>
+   <span class="nt">from</span> <span class="p">{</span>
+       <span class="k">transform</span><span class="p">:</span> <span class="nb">translateX</span><span class="p">(</span><span class="mi">0</span><span class="kt">%</span><span class="p">);</span> 
+   <span class="p">}</span>
+
+   <span class="nt">to</span> <span class="p">{</span>
+       <span class="k">transform</span><span class="p">:</span> <span class="nb">translateX</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>该写法下，只有两个关键帧（from... to... ）。</p>
+</li>
+<li>
+<p>百分数节点表达</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-CSS" data-lang="CSS"><span class="p">@</span><span class="k">keyframes</span> <span class="nt">identifier</span> <span class="p">{</span>
+   <span class="nt">0</span><span class="o">%</span> <span class="p">{</span> <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+   <span class="nt">30</span><span class="o">%</span> <span class="p">{</span> <span class="k">top</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+   <span class="nt">68</span><span class="o">%,</span> <span class="nt">72</span><span class="o">%</span> <span class="p">{</span> <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+   <span class="nt">100</span><span class="o">%</span> <span class="p">{</span> <span class="k">top</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span> <span class="k">left</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>如果某一个关键帧出现了重复的定义，且重复的关键帧中的 CSS 属性值不同，则以最后一次定义的属性为准。</p>
 </li>
 </ol>
-<h2 id="文档流"><a href="#文档流" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:文档流" class="headings">文档流</a></h2>
-<hr>
-<p>施工👷中……</p>
-<h2 id="布局方式"><a href="#布局方式" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:布局方式" class="headings">布局方式</a></h2>
-<hr>
-<p>施工👷中……</p>
+</li>
+</ol>
+</li>
+<li>
+<p>其他</p>
+<p>若不使用animation动画，当CSS动画有中间状态时，也可以使用多次<code>transform</code>解决问题。</p>
+</li>
+</ol>
+</li>
+</ol>
 
             </div>
 
@@ -351,13 +541,9 @@
     
         <ul class="post-nav">
             
-                <li class="post-nav-prev">
-                    <a href="/tech/210715/" rel="prev">&lt; CSS动画入门</a>
-                </li>
-            
             
                 <li class="post-nav-next">
-                    <a href="/tech/210625/" rel="next">HTML重点标签 &gt;</a>
+                    <a href="/tech/210711/" rel="next">CSS基础知识合辑 &gt;</a>
                 </li>
             
         </ul>

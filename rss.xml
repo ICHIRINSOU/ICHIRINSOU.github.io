@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Wed, 24 Nov 2021 04:31:22 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 25 Nov 2021 01:21:58 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -97,6 +97,7 @@
 &lt;li&gt;
 &lt;h3 id=&#34;渲染步骤&#34;&gt;渲染步骤&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://ichirinsou.github.io/images/render.png&#34; alt=&#34;Render&#34; title=&#34;浏览器渲染原理&#34;&gt;&lt;/p&gt;
+&lt;p&gt;关于具体的浏览器渲染流程，请酌情参考&lt;a href=&#34;https://juejin.cn/post/6844904017907154951&#34;&gt;此文章&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;更新样式&#34;&gt;更新样式&lt;/h3&gt;
@@ -216,7 +217,7 @@
 &lt;li&gt;
 &lt;p&gt;作用&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation&#34;&gt;&lt;code&gt;animation&lt;/code&gt;&lt;/a&gt;可以将一个CSS样式配置转换到另一个CSS样式配置。动画包括两个部分：描述动画的样式规则和用于指定动画开始、结束以及中间点样式的关键帧。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation&#34;&gt;&lt;code&gt;animation&lt;/code&gt;&lt;/a&gt;可以将一个CSS样式配置转换到另一个CSS样式配置。动画包括两个部分：描述动画的样式规则和用于指定动画开始、结束以及中间点样式的关键帧。&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -279,10 +280,10 @@
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;该写法下，只有两个关键帧（from... to... ）。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;该写法下，只有两个关键帧（from ... to ... ）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;百分数节点表达&lt;/p&gt;
+&lt;p&gt;百分数关键帧表达&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -309,7 +310,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;其他&lt;/p&gt;
-&lt;p&gt;若不使用animation动画，当CSS动画有中间状态时，也可以使用多次&lt;code&gt;transform&lt;/code&gt;解决问题。&lt;/p&gt;
+&lt;p&gt;若不使用animation动画，当CSS动画有中间状态时，也可以使用多次&lt;code&gt;transform&lt;/code&gt;解决问题。（但是一般推荐使用更为灵活强大的animation功能）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;

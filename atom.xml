@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2021-11-25T01:21:58&#43;08:00</updated>
+    <updated>2021-11-25T01:23:32&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -78,14 +78,14 @@
             <title type="text">CSS动画入门</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210715/" />
             <id>https://ichirinsou.github.io/tech/210715/</id>
-            <updated>2021-11-25T01:21:32&#43;08:00</updated>
+            <updated>2021-11-25T01:23:23&#43;08:00</updated>
             <published>2021-07-15T20:39:45&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
                     <uri>https://ichirinsou.github.io/</uri>
                     <email>evie.hiillos@gmail.com</email>
                     </author>
-            <summary type="html">基础浏览器渲染原理 渲染步骤 关于具体的浏览器渲染流程，请酌情参考此文章 更新样式 开发中，……</summary>
+            <summary type="html">基础浏览器渲染原理 渲染步骤 关于具体的浏览器渲染流程，可参考此文章 更新样式 开发中，一般……</summary>
             
                 <content type="html">&lt;h2 id=&#34;基础浏览器渲染原理&#34;&gt;基础浏览器渲染原理&lt;/h2&gt;
 &lt;hr&gt;
@@ -93,7 +93,7 @@
 &lt;li&gt;
 &lt;h3 id=&#34;渲染步骤&#34;&gt;渲染步骤&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://ichirinsou.github.io/images/render.png&#34; alt=&#34;Render&#34; title=&#34;浏览器渲染原理&#34;&gt;&lt;/p&gt;
-&lt;p&gt;关于具体的浏览器渲染流程，请酌情参考&lt;a href=&#34;https://juejin.cn/post/6844904017907154951&#34;&gt;此文章&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;关于具体的浏览器渲染流程，可参考&lt;a href=&#34;https://juejin.cn/post/6844904017907154951&#34;&gt;此文章&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;更新样式&#34;&gt;更新样式&lt;/h3&gt;

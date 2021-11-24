@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Thu, 25 Nov 2021 01:21:58 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 25 Nov 2021 01:23:32 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -97,7 +97,7 @@
 &lt;li&gt;
 &lt;h3 id=&#34;渲染步骤&#34;&gt;渲染步骤&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://ichirinsou.github.io/images/render.png&#34; alt=&#34;Render&#34; title=&#34;浏览器渲染原理&#34;&gt;&lt;/p&gt;
-&lt;p&gt;关于具体的浏览器渲染流程，请酌情参考&lt;a href=&#34;https://juejin.cn/post/6844904017907154951&#34;&gt;此文章&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;关于具体的浏览器渲染流程，可参考&lt;a href=&#34;https://juejin.cn/post/6844904017907154951&#34;&gt;此文章&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;更新样式&#34;&gt;更新样式&lt;/h3&gt;

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2021-11-26T23:46:33&#43;08:00</updated>
+    <updated>2021-11-27T13:28:52&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -67,6 +67,177 @@
                             
                             
                                 <category scheme="https://ichirinsou.github.io/tags/essay/" term="essay" label="essay" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">浅析URL相关</title>
+            <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210717/" />
+            <id>https://ichirinsou.github.io/tech/210717/</id>
+            <updated>2021-11-27T13:27:16&#43;08:00</updated>
+            <published>2021-07-17T21:27:25&#43;08:00</published>
+            <author>
+                    <name>Hiillos</name>
+                    <uri>https://ichirinsou.github.io/</uri>
+                    <email>evie.hiillos@gmail.com</email>
+                    </author>
+            <summary type="html">URL 什么是URL 统一资源定位符（Uniform Resource Locator，缩写：URL）俗称网页……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;url&#34;&gt;URL&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;什么是url&#34;&gt;什么是URL&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;统一资源定位符（Uniform Resource Locator，缩写：URL）俗称网页地址，简称网址。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;URL（统一资源定位符）是URI（统一资源标志符）的一种。关于这三者的具体关系，&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E6%A0%87%E5%BF%97%E7%AC%A6&#34;&gt;wiki&lt;/a&gt;中有较为深入浅出的解释。
+&lt;img src=&#34;https://ichirinsou.github.io/images/URI.svg&#34; alt=&#34;URI&#34; title=&#34;三者关系如图&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;url的组成及各部分含义&#34;&gt;URL的组成及各部分含义&lt;/h3&gt;
+&lt;p&gt;如果我们已经稔熟了URL与URI之间的异同，那么我们不难发现每一个遵循HTTP/HTTPS协议的URL都符合通用URI语法。
+&lt;img src=&#34;https://ichirinsou.github.io/images/URI_syntax_diagram.svg&#34; alt=&#34;URI&#34; title=&#34;URI语法图&#34;&gt;
+实际上URL就是一种URI，它标志着一个资源在 Web 上的地址。理论上说，每个有效的 URL 都指向唯一一个资源。&lt;/p&gt;
+&lt;p&gt;以一个网址为例&lt;code&gt;https://developer.mozilla.org:443/zh-CN/search?q=URL#3&lt;/code&gt;，同样深入浅出的剖析一下URL的结构。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;https :&lt;/p&gt;
+&lt;p&gt;这是一个方案（scheme）为HTTPS协议的URL。它表明了浏览器需要使用这种协议才能与服务器进行正常通信。而方案确定后一般都会使用 “ : ”  进行承接。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;// developer.mozilla.org:443&lt;/p&gt;
+&lt;p&gt;//（在某些URI方案中 // 是可以省略的） 后开启的是 &lt;code&gt;developer.mozilla.org&lt;/code&gt; 我们一般称之为&lt;strong&gt;域名&lt;/strong&gt;的部分，实际上它表明我们正在请求哪个&lt;strong&gt;服务器&lt;/strong&gt;，结合我们上面给出的URI语法图不难看出，这部分正是host，即主机。这部分一般由IP地址构成，而域名正是IP的“化身”，为了让我们更好记忆。&lt;/p&gt;
+&lt;p&gt;:443是端口，它表示我们访问服务器资源的“门”，如果服务器使用的是HTTP协议（使用HTTP请走80号“门”，HTTPS为443）的标准端口来授予其资源的访问权限，那么端口通常可以忽略，否则需要注明。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;/  zh-CN/search&lt;/p&gt;
+&lt;p&gt;以 / 为间隔分割的部分是路径（path）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在Web的早期阶段，像这样的路径表示Web服务器上的物理文件位置。如今，它主要是由没有任何物理现实的Web服务器处理的抽象。&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/What_is_a_URL&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;? q=URL&lt;/p&gt;
+&lt;p&gt;? 后是提供给服务器的查询（query）字符串，每个服务器都有自己不同的参数规则，这部分的语法是无法明确定义的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;#3&lt;/p&gt;
+&lt;p&gt;资源的“书签”，锚点，向浏览器提供指向资源的方向并定位。# 后的部分又称为片段（fragment）标识符，这部分内容不会上传至所请求的服务器。且锚点是不支持中文的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如此一来不难看出，我们平时🏄使用的URL一般是这么组成的：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;URL = 协议类型 + 域名或IP + （一般省略的）端口 + 路径 + 查询字符串 + 锚点&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;也不难看出这个示例网址是我在MDN查询URL词条，注明了省略的端口号，蹩脚的添加了一个MDN查询页并没有的id=3的无效锚点。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;域名与ip&#34;&gt;域名与IP&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;域名与ip-1&#34;&gt;域名与IP&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;IP&lt;/p&gt;
+&lt;p&gt;IP用来定位互联网中的设备。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;特殊的IP&lt;/p&gt;
+&lt;p&gt;127.0.0.1 与 localhost 表示本机（本设备）&lt;/p&gt;
+&lt;p&gt;0.0.0.0 不表示任何设备&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;路由器究竟做了什么？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;路由器一般有两个IP，一个内网IP，一个外网IP&lt;/li&gt;
+&lt;li&gt;内网中的设备可以互相访问，但是不能直接访问外网&lt;/li&gt;
+&lt;li&gt;同理，外网中的设备可以互相访问，但是不能直接访问内网&lt;/li&gt;
+&lt;li&gt;正因为内网和外网像两个隔绝的空间，无法互通，所以才需要路由器（网关）联通内外网&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;域名&lt;/p&gt;
+&lt;p&gt;域名就是对IP的别称。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;域名与IP的对应关系&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个域名可以对应不同的IP，均衡负载，减少服务器压力&lt;/li&gt;
+&lt;li&gt;一个IP也可以对应不同的域名 ，共享主机，尽最大程度利用资源（因为穷😭）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;域名的分类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;.com 是顶级域名（Top-Level Domain , TLD），每个域名都会以一个顶级域名为结尾，例如本小破站的顶级域名为 .ink&lt;/li&gt;
+&lt;li&gt;hiillos.ink 是二级域名，在域名层级划分中，二级域名在顶级域名的左侧，是顶级域名的子域名。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hiillos.ink&#34;&gt;www.hiillos.ink&lt;/a&gt; 是三级域名，是二级域名的子域名。&lt;/li&gt;
+&lt;li&gt;是的没错，它们是父子关系👨👦(･_･;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;ping命令&#34;&gt;ping命令&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ping命令通常作为网络可用性的检查。它的主要功能就是对一个网址发送测试数据包，观察其是否响应并统计响应时间，从而检查网络。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ping hiillos.ink&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ichirinsou.github.io/images/ping.png&#34; alt=&#34;ping&#34; title=&#34;如果尝试ping一下我的破站的话(((o(*ﾟ▽ﾟ*)o)))&#34;&gt;&lt;/p&gt;
+&lt;p&gt;macOS中，需要手动&lt;code&gt;control+c&lt;/code&gt;停止ping命令，否则它就会一直孜孜不倦地向服务器发送测试数据包……&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;dns&#34;&gt;DNS&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;什么是dns&#34;&gt;什么是DNS&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DNS (Domain Name System) 域名系统，是一个层次化、分散化的Internet连接资源命名系统。DNS维护着一个包含域名与对应资源例如IP地址的列表。&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Glossary/DNS&#34;&gt;[2]&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;dns的作用&#34;&gt;DNS的作用&lt;/h3&gt;
+&lt;p&gt;DNS使得我们的域名与IP联系起来，DNS查询（DNS lookup）服务可以将域名解析为IP地址，反之，DNS反向查询（rDNS）也可以找到与IP对应的域名。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;nslookup命令&#34;&gt;nslookup命令&lt;/h3&gt;
+&lt;p&gt;nslookup命令用来查询DNS记录，查看域名解析是否正常，在网络发生故障的时候可以作为一种辅助检查的手段。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nslookup hiillos.ink&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nslookup www.hiillos.ink&lt;/code&gt;
+&lt;img src=&#34;https://ichirinsou.github.io/images/nslookup.png&#34; alt=&#34;nslookup&#34; title=&#34;使用nslookup查询本站(´▽｀)&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看出发出查询请求的服务器是处于内网中的我自己，而hiillos.ink给我的应答是其实它是一个CNAME记录，指向的真实域名是ichirinsou.github.io，这是github.io免费给我使用的子域名，即我使用的其实是github服务器。&lt;/p&gt;
+&lt;p&gt;不过因最近购入了较为实惠的ECS，我已经开始着手将整个blog进行迁移✌️。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://ichirinsou.github.io/tech/" term="tech" label="tech" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://ichirinsou.github.io/tags/html/" term="HTML" label="HTML" />
                             
                         
                     

@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Sat, 27 Nov 2021 13:28:52 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 27 Nov 2021 17:49:52 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -185,12 +185,12 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;ping命令&#34;&gt;ping命令&lt;/h3&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;p&gt;ping命令通常作为网络可用性的检查。它的主要功能就是对一个网址发送测试数据包，观察其是否响应并统计响应时间，从而检查网络。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ping hiillos.ink&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://ichirinsou.github.io/images/ping.png&#34; alt=&#34;ping&#34; title=&#34;如果尝试ping一下我的破站的话(((o(*ﾟ▽ﾟ*)o)))&#34;&gt;&lt;/p&gt;
 &lt;p&gt;macOS中，需要手动&lt;code&gt;control+c&lt;/code&gt;停止ping命令，否则它就会一直孜孜不倦地向服务器发送测试数据包……&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;

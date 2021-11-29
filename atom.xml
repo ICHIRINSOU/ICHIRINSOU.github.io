@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2021-11-27T17:49:52&#43;08:00</updated>
+    <updated>2021-11-29T22:05:39&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -78,7 +78,7 @@
             <title type="text">浅析URL相关</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210717/" />
             <id>https://ichirinsou.github.io/tech/210717/</id>
-            <updated>2021-11-27T17:49:32&#43;08:00</updated>
+            <updated>2021-11-27T17:55:39&#43;08:00</updated>
             <published>2021-07-17T21:27:25&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -179,16 +179,16 @@
 &lt;li&gt;是的没错，它们是父子关系👨👦(･_･;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;ping命令&#34;&gt;ping命令&lt;/h3&gt;
 &lt;p&gt;ping命令通常作为网络可用性的检查。它的主要功能就是对一个网址发送测试数据包，观察其是否响应并统计响应时间，从而检查网络。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ping hiillos.ink&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://ichirinsou.github.io/images/ping.png&#34; alt=&#34;ping&#34; title=&#34;如果尝试ping一下我的破站的话(((o(*ﾟ▽ﾟ*)o)))&#34;&gt;&lt;/p&gt;
 &lt;p&gt;macOS中，需要手动&lt;code&gt;control+c&lt;/code&gt;停止ping命令，否则它就会一直孜孜不倦地向服务器发送测试数据包……&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;dns&#34;&gt;DNS&lt;/h2&gt;

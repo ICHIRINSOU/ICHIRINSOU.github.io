@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Tue, 07 Dec 2021 23:57:13 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 08 Dec 2021 23:34:33 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -74,6 +74,49 @@
                                 
                                 
                                     <category domain="https://ichirinsou.github.io/tags/essay/">essay</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>JavaScript的诞生</title>
+                <link>https://ichirinsou.github.io/tech/210718/</link>
+                <guid isPermaLink="true">https://ichirinsou.github.io/tech/210718/</guid>
+                <pubDate>Sun, 18 Jul 2021 12:27:36 &#43;0800</pubDate>
+                
+                    <author>evie.hiillos@gmail.com (Hiillos)</author>
+                
+                
+                
+                    <description>&lt;p&gt;今天一定！&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://ichirinsou.github.io/tech/">tech</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://ichirinsou.github.io/tags/javascript/">JavaScript</category>
                                 
                             
                         

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2021-12-07T23:57:13&#43;08:00</updated>
+    <updated>2021-12-08T23:34:33&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -75,10 +75,56 @@
         </entry>
     
         <entry>
+            <title type="text">JavaScript的诞生</title>
+            <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210718/" />
+            <id>https://ichirinsou.github.io/tech/210718/</id>
+            <updated>2021-12-08T23:34:26&#43;08:00</updated>
+            <published>2021-07-18T12:27:36&#43;08:00</published>
+            <author>
+                    <name>Hiillos</name>
+                    <uri>https://ichirinsou.github.io/</uri>
+                    <email>evie.hiillos@gmail.com</email>
+                    </author>
+            <summary type="html">今天一定！</summary>
+            
+                <content type="html">&lt;p&gt;今天一定！&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://ichirinsou.github.io/tech/" term="tech" label="tech" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://ichirinsou.github.io/tags/javascript/" term="JavaScript" label="JavaScript" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">浅析URL相关</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210717/" />
             <id>https://ichirinsou.github.io/tech/210717/</id>
-            <updated>2021-11-27T17:55:39&#43;08:00</updated>
+            <updated>2021-12-08T16:39:24&#43;08:00</updated>
             <published>2021-07-17T21:27:25&#43;08:00</published>
             <author>
                     <name>Hiillos</name>

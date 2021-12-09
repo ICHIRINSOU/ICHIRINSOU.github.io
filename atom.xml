@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2021-12-08T23:34:33&#43;08:00</updated>
+    <updated>2021-12-09T23:19:21&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -75,19 +75,39 @@
         </entry>
     
         <entry>
-            <title type="text">JavaScript的诞生</title>
+            <title type="text">JavaScript的诞生轶谈</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210718/" />
             <id>https://ichirinsou.github.io/tech/210718/</id>
-            <updated>2021-12-08T23:34:26&#43;08:00</updated>
+            <updated>2021-12-09T23:00:29&#43;08:00</updated>
             <published>2021-07-18T12:27:36&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
                     <uri>https://ichirinsou.github.io/</uri>
                     <email>evie.hiillos@gmail.com</email>
                     </author>
-            <summary type="html">今天一定！</summary>
+            <summary type="html">关于JavaScript的诞生 何为JavaScript 如果以非常正式的口吻来介绍Ja……</summary>
             
-                <content type="html">&lt;p&gt;今天一定！&lt;/p&gt;
+                <content type="html">&lt;h2 id=&#34;关于javascript的诞生&#34;&gt;关于JavaScript的诞生&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;何为javascript&#34;&gt;何为JavaScript&lt;/h3&gt;
+&lt;p&gt;如果以非常正式的口吻来介绍JavaScript，请允许我引用大家所熟知的wiki&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;javascript轶事&#34;&gt;JavaScript轶事&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;关于javascript的争议&#34;&gt;关于JavaScript的「争议」&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;争议的暴风中心&#34;&gt;「争议」的「暴风中心」&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;一些拙见&#34;&gt;一些拙见&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content>
             
             

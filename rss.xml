@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Wed, 08 Dec 2021 23:34:33 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 09 Dec 2021 23:19:21 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -82,7 +82,7 @@
             </item>
         
             <item>
-                <title>JavaScript的诞生</title>
+                <title>JavaScript的诞生轶谈</title>
                 <link>https://ichirinsou.github.io/tech/210718/</link>
                 <guid isPermaLink="true">https://ichirinsou.github.io/tech/210718/</guid>
                 <pubDate>Sun, 18 Jul 2021 12:27:36 &#43;0800</pubDate>
@@ -91,7 +91,27 @@
                 
                 
                 
-                    <description>&lt;p&gt;今天一定！&lt;/p&gt;
+                    <description>&lt;h2 id=&#34;关于javascript的诞生&#34;&gt;关于JavaScript的诞生&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;何为javascript&#34;&gt;何为JavaScript&lt;/h3&gt;
+&lt;p&gt;如果以非常正式的口吻来介绍JavaScript，请允许我引用大家所熟知的wiki&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;javascript轶事&#34;&gt;JavaScript轶事&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;关于javascript的争议&#34;&gt;关于JavaScript的「争议」&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;争议的暴风中心&#34;&gt;「争议」的「暴风中心」&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;一些拙见&#34;&gt;一些拙见&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </description>
                 
                 

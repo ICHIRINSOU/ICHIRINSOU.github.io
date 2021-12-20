@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2021-12-10T15:52:42&#43;08:00</updated>
+    <updated>2021-12-20T16:42:37&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -78,7 +78,7 @@
             <title type="text">JavaScript的诞生轶谈</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210718/" />
             <id>https://ichirinsou.github.io/tech/210718/</id>
-            <updated>2021-12-10T15:51:25&#43;08:00</updated>
+            <updated>2021-12-19T23:13:52&#43;08:00</updated>
             <published>2021-07-18T12:27:36&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -188,7 +188,7 @@
             <title type="text">浅析URL相关</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210717/" />
             <id>https://ichirinsou.github.io/tech/210717/</id>
-            <updated>2021-12-08T16:39:24&#43;08:00</updated>
+            <updated>2021-12-19T23:13:52&#43;08:00</updated>
             <published>2021-07-17T21:27:25&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -359,7 +359,7 @@
             <title type="text">CSS动画入门</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210715/" />
             <id>https://ichirinsou.github.io/tech/210715/</id>
-            <updated>2021-11-25T01:23:23&#43;08:00</updated>
+            <updated>2021-12-19T23:13:19&#43;08:00</updated>
             <published>2021-07-15T20:39:45&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -628,7 +628,7 @@
             <title type="text">CSS基础知识合辑</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210711/" />
             <id>https://ichirinsou.github.io/tech/210711/</id>
-            <updated>2021-11-24T17:01:57&#43;08:00</updated>
+            <updated>2021-12-19T23:13:52&#43;08:00</updated>
             <published>2021-07-11T04:26:22&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -709,7 +709,7 @@
             <title type="text">HTML重点标签</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210625/" />
             <id>https://ichirinsou.github.io/tech/210625/</id>
-            <updated>2021-11-20T20:32:43&#43;08:00</updated>
+            <updated>2021-12-19T23:13:52&#43;08:00</updated>
             <published>2021-06-25T03:23:20&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -1063,7 +1063,7 @@
             <title type="text">HTML入门指南</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210621/" />
             <id>https://ichirinsou.github.io/tech/210621/</id>
-            <updated>2021-07-20T03:59:43&#43;08:00</updated>
+            <updated>2021-12-19T23:13:52&#43;08:00</updated>
             <published>2021-06-21T19:55:49&#43;08:00</published>
             <author>
                     <name>Hiillos</name>

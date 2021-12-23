@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2021-12-24T04:37:32&#43;08:00</updated>
+    <updated>2021-12-24T04:41:31&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">JavaScript基础语法</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210722/" />
             <id>https://ichirinsou.github.io/tech/210722/</id>
-            <updated>2021-12-24T04:37:25&#43;08:00</updated>
+            <updated>2021-12-24T04:41:19&#43;08:00</updated>
             <published>2021-07-22T22:00:38&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -289,7 +289,7 @@
 &lt;ul&gt;
 &lt;li&gt;首先执行初始化表达式，该表达式也可以声明变量。&lt;/li&gt;
 &lt;li&gt;进入条件表达式进行判断，若为真则执行循环体，若为假则for循环终止跳出。&lt;/li&gt;
-&lt;li&gt;完成执行循环体后，若有更新表达式则执行更新，再次进入条件表达式进行判断直至跳出。&lt;/li&gt;
+&lt;li&gt;完成循环体执行后，若有更新表达式则执行更新，再次进入条件表达式进行判断直至跳出。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;for语句的三个部分&lt;code&gt;for ( [initialExpression] ; [condition] ;  [incrementExpression] )&lt;/code&gt;，可以省略任何一个，也可以全部省略。但是不巧妙的省略可能会巧妙的变成死循环😓&lt;/li&gt;

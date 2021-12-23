@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2021-12-24T04:41:31&#43;08:00</updated>
+    <updated>2021-12-24T04:43:32&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">JavaScript基础语法</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210722/" />
             <id>https://ichirinsou.github.io/tech/210722/</id>
-            <updated>2021-12-24T04:41:19&#43;08:00</updated>
+            <updated>2021-12-24T04:43:25&#43;08:00</updated>
             <published>2021-07-22T22:00:38&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -34,8 +34,8 @@
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;h3 id=&#34;语句statement&#34;&gt;语句（statement）&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;“JavaScript 程序的执行单位为行（line），也就是一行一行地执行。一般情况下，每一行就是一个语句。”&lt;/em&gt; &lt;strong&gt;语句&lt;/strong&gt;一般会改变环境（例如声明、赋值）。&lt;/p&gt;
+&lt;h3 id=&#34;语句-1&#34;&gt;语句&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;“JavaScript 程序的执行单位为行（line），也就是一行一行地执行。一般情况下，每一行就是一个语句。”&lt;/em&gt; 语句（statement）一般会改变环境（例如声明、赋值）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;表达式&#34;&gt;表达式&lt;/h3&gt;

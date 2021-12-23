@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Fri, 24 Dec 2021 04:41:31 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 24 Dec 2021 04:43:32 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -41,8 +41,8 @@
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;h3 id=&#34;语句statement&#34;&gt;语句（statement）&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;“JavaScript 程序的执行单位为行（line），也就是一行一行地执行。一般情况下，每一行就是一个语句。”&lt;/em&gt; &lt;strong&gt;语句&lt;/strong&gt;一般会改变环境（例如声明、赋值）。&lt;/p&gt;
+&lt;h3 id=&#34;语句-1&#34;&gt;语句&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;“JavaScript 程序的执行单位为行（line），也就是一行一行地执行。一般情况下，每一行就是一个语句。”&lt;/em&gt; 语句（statement）一般会改变环境（例如声明、赋值）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;表达式&#34;&gt;表达式&lt;/h3&gt;

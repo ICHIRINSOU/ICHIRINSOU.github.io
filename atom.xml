@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2021-12-24T04:32:59&#43;08:00</updated>
+    <updated>2021-12-24T04:37:32&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">JavaScript基础语法</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210722/" />
             <id>https://ichirinsou.github.io/tech/210722/</id>
-            <updated>2021-12-24T04:32:53&#43;08:00</updated>
+            <updated>2021-12-24T04:37:25&#43;08:00</updated>
             <published>2021-07-22T22:00:38&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -50,7 +50,7 @@
 &lt;ul&gt;
 &lt;li&gt;JavaScript对大小写敏感&lt;/li&gt;
 &lt;li&gt;不影响断句的情况下，空格键没有实际意义&lt;/li&gt;
-&lt;li&gt;回车键也是没有实际意义的，但retunrn后面不可以加回车&lt;/li&gt;
+&lt;li&gt;回车键也是没有实际意义的，但return后面不可以加回车&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -220,7 +220,7 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;while&#34;&gt;while&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;“&lt;code&gt;While&lt;/code&gt;语句包括一个循环条件和一段代码块，只要条件为真，就不断循环执行代码块。”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“While语句包括一个循环条件和一段代码块，只要条件为真，就不断循环执行代码块。”&lt;/em&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;语法&lt;/p&gt;
@@ -289,7 +289,7 @@
 &lt;ul&gt;
 &lt;li&gt;首先执行初始化表达式，该表达式也可以声明变量。&lt;/li&gt;
 &lt;li&gt;进入条件表达式进行判断，若为真则执行循环体，若为假则for循环终止跳出。&lt;/li&gt;
-&lt;li&gt;执行循环体后，若有更新表达式则执行更新，再次进入条件表达式进行判断直至跳出。&lt;/li&gt;
+&lt;li&gt;完成执行循环体后，若有更新表达式则执行更新，再次进入条件表达式进行判断直至跳出。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;for语句的三个部分&lt;code&gt;for ( [initialExpression] ; [condition] ;  [incrementExpression] )&lt;/code&gt;，可以省略任何一个，也可以全部省略。但是不巧妙的省略可能会巧妙的变成死循环😓&lt;/li&gt;
@@ -322,7 +322,7 @@
    &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;//上面代码只会执行10次循环，一旦i等于10，就会跳出循环。
+&lt;span class=&#34;c1&#34;&gt;//上述代码只会执行10次循环，一旦i等于10，就会跳出循环。
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
@@ -348,7 +348,7 @@
     &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;i 当前为：&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;//上面代码只有在i为奇数时，才会输出i的值。如果i为偶数，则直接进入下一轮循环。
+&lt;span class=&#34;c1&#34;&gt;//上述代码只有在i为奇数时，才会输出i的值。如果i为偶数，则直接进入下一轮循环。
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
@@ -361,7 +361,7 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;label标签&#34;&gt;label标签&lt;/h2&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;“JavaScript 语言允许，语句的前面有标签（label），相当于定位符，用于跳转到程序的任意位置。”&lt;/em&gt; 标签可以和&lt;code&gt;break &lt;/code&gt;或&lt;code&gt;continue&lt;/code&gt;语句一起使用，跳出指定的循环，但使用label标签的循环或语句块较为罕见，通常情况下都不会使用这种基于标签的循环跳转。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“JavaScript 语言允许，语句的前面有标签（label），相当于定位符，用于跳转到程序的任意位置。”&lt;/em&gt; 标签可以和&lt;code&gt;break&lt;/code&gt;或&lt;code&gt;continue&lt;/code&gt;语句一起使用，跳出指定的循环，但使用label标签的循环或语句块较为罕见，通常情况下都不会使用这种基于标签的循环跳转。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1

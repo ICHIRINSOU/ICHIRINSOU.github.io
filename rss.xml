@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Wed, 22 Dec 2021 23:29:14 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 24 Dec 2021 04:31:50 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -151,7 +151,7 @@
 &lt;p&gt;首先，我使用JavaScript这门语言的时间还不算长，并不能武断地讲清它具体哪里好哪里不好，因此读完这些文章后，有一部分可以感受到的，会默说一声确实，而别的部分，还需要更加细致入微的掌握 &lt;del&gt;踩坑&lt;/del&gt; 以后才能说得清道得明，如果未来有这样的问题，笔者也会偷摸写篇blog给大家看。&lt;/p&gt;
 &lt;p&gt;还有一点，其实文章中有些「缺陷」或者说「争议」，在我看来倒不如说是JavaScript灵活的体现。比如 + 运算符，在我的脑回路里，这点倒是分得明白。而对基本类型的包装对象类型，正如文章下的评论所说，确实某种意义上也体现了JS的严谨。但无可厚非，阮一峰老师文章写得十分中肯。&lt;/p&gt;
 &lt;p&gt;规避缺陷是可行的，每种语言都有「错综复杂」的陷阱和坑 &lt;del&gt;甚至有的不知道比JavaScript多到哪里去了&lt;/del&gt; ，函数式prototype的编程方法也确实让JavaScript更强大，现在随着最新标准迭代，各类库层出不穷，JS足以变得使人“哇塞”。&lt;/p&gt;
-&lt;p&gt;我较为详细的看了blog下的评论，「百家争鸣」，也顺着给出的链接去拜读了一下&lt;a href=&#34;https://brendaneich.com/2008/04/popularity/&#34;&gt;Brendan Eich的自述&lt;/a&gt;，确实充满了自黑的幽默口吻，他说他不爱JavaScript，甚至恨它。要我说，怎么可能呢😆。&lt;/p&gt;
+&lt;p&gt;我较为详细的看了blog下的评论，「百家争鸣」，也顺着给出的链接去拜读了一下&lt;a href=&#34;https://brendaneich.com/2008/04/popularity/&#34;&gt;Brendan Eich的自述&lt;/a&gt;，确实充满了自黑的幽默口吻，他说他不爱JavaScript，甚至恨它😆。&lt;/p&gt;
 &lt;p&gt;最后，冒昧的使用了Lisces的评论作为结尾，有些说出了我的心中所想。
 &lt;img src=&#34;https://ichirinsou.github.io/images/comment.png&#34; alt=&#34;评论&#34; title=&#34;Lisces评论于阮一峰博客&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;

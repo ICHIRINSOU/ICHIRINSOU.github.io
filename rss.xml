@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Wed, 05 Jan 2022 02:03:53 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 05 Jan 2022 02:07:04 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -337,7 +337,7 @@
 &lt;span class=&#34;c1&#34;&gt;//返回true
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//虽然我们修改了obj1的隐藏属性，指向了对象obj2
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//但是因为对象obj2中仍然有原型存在，我们仍旧可以调用toString
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//这仍旧是不推荐的写法，如果想要声明一个拥有此类原型链的对象
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//这仍旧是不推荐的写法，如果想要声明一个拥有此类原型链的对象⬇️
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;obj2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
 &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;obj1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Object&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;obj2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;//以obj2为原型构造对象

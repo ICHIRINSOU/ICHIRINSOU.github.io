@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-01-05T02:03:53&#43;08:00</updated>
+    <updated>2022-01-05T02:07:04&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">JavaScript数据类型 · 对象（object）</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210811/" />
             <id>https://ichirinsou.github.io/tech/210811/</id>
-            <updated>2022-01-05T02:03:29&#43;08:00</updated>
+            <updated>2022-01-05T02:06:55&#43;08:00</updated>
             <published>2021-08-11T23:01:04&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -330,7 +330,7 @@
 &lt;span class=&#34;c1&#34;&gt;//返回true
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//虽然我们修改了obj1的隐藏属性，指向了对象obj2
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//但是因为对象obj2中仍然有原型存在，我们仍旧可以调用toString
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//这仍旧是不推荐的写法，如果想要声明一个拥有此类原型链的对象
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//这仍旧是不推荐的写法，如果想要声明一个拥有此类原型链的对象⬇️
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;obj2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
 &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;obj1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Object&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;obj2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;//以obj2为原型构造对象

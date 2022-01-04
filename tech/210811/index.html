@@ -54,13 +54,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-08-11T23:01:04+08:00",
-        "dateModified": "2022-01-05T02:03:29+08:00",
+        "dateModified": "2022-01-05T02:06:55+08:00",
         "url": "https://ichirinsou.github.io/tech/210811/",
         "headline": "JavaScript数据类型 · 对象（object）",
         "description": "对象（object） 对象（object）是JavaScript语言的核心概念，也是最……",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  1936 ,
+        "wordCount":  1938 ,
         "author": {
             "@type": "Person",
             "description": "Hurricane, hurricane 🥀",
@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="僕と花" />
 <meta property="og:locale" content="zh" /><meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-08-11T23:01:04&#43;08:00" />
-    <meta property="article:modified_time" content="2022-01-05T02:03:29&#43;08:00" />
+    <meta property="article:modified_time" content="2022-01-05T02:06:55&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -516,7 +516,7 @@
 <span class="c1">//返回true
 </span><span class="c1">//虽然我们修改了obj1的隐藏属性，指向了对象obj2
 </span><span class="c1">//但是因为对象obj2中仍然有原型存在，我们仍旧可以调用toString
-</span><span class="c1">//这仍旧是不推荐的写法，如果想要声明一个拥有此类原型链的对象
+</span><span class="c1">//这仍旧是不推荐的写法，如果想要声明一个拥有此类原型链的对象⬇️
 </span><span class="c1"></span><span class="kd">let</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="kd">let</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">obj2</span><span class="p">)</span>
 <span class="c1">//以obj2为原型构造对象

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-01-05T02:07:04&#43;08:00</updated>
+    <updated>2022-01-12T00:46:21&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">JavaScript数据类型 · 对象（object）</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210811/" />
             <id>https://ichirinsou.github.io/tech/210811/</id>
-            <updated>2022-01-05T02:06:55&#43;08:00</updated>
+            <updated>2022-01-12T00:38:21&#43;08:00</updated>
             <published>2021-08-11T23:01:04&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -841,10 +841,10 @@
         </entry>
     
         <entry>
-            <title type="text">JavaScript的诞生轶谈</title>
+            <title type="text">JavaScript诞生轶谈</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210718/" />
             <id>https://ichirinsou.github.io/tech/210718/</id>
-            <updated>2021-12-24T04:25:36&#43;08:00</updated>
+            <updated>2022-01-12T00:46:01&#43;08:00</updated>
             <published>2021-07-18T12:27:36&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -1961,7 +1961,7 @@
             <title type="text">我与花与爱丽丝</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/life/210621/" />
             <id>https://ichirinsou.github.io/life/210621/</id>
-            <updated>2021-06-21T19:50:46&#43;08:00</updated>
+            <updated>2022-01-12T00:46:17&#43;08:00</updated>
             <published>2021-06-21T19:02:52&#43;08:00</published>
             <author>
                     <name>Hiillos</name>

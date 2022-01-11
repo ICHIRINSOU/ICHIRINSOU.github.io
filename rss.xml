@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Wed, 05 Jan 2022 02:07:04 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 12 Jan 2022 00:46:21 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -842,7 +842,7 @@
             </item>
         
             <item>
-                <title>JavaScript的诞生轶谈</title>
+                <title>JavaScript诞生轶谈</title>
                 <link>https://ichirinsou.github.io/tech/210718/</link>
                 <guid isPermaLink="true">https://ichirinsou.github.io/tech/210718/</guid>
                 <pubDate>Sun, 18 Jul 2021 12:27:36 &#43;0800</pubDate>

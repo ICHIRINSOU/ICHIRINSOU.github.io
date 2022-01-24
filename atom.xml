@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-01-22T23:10:50&#43;08:00</updated>
+    <updated>2022-01-24T21:08:55&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -17,10 +17,10 @@
     
     <generator uri="https://gohugo.io/" version="0.83.1">Hugo</generator>
         <entry>
-            <title type="text">JavaScript数据类型 · 对象（object）</title>
+            <title type="text">JavaScript数据类型II 对象</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210811/" />
             <id>https://ichirinsou.github.io/tech/210811/</id>
-            <updated>2022-01-12T00:38:21&#43;08:00</updated>
+            <updated>2022-01-24T21:08:48&#43;08:00</updated>
             <published>2021-08-11T23:01:04&#43;08:00</published>
             <author>
                     <name>Hiillos</name>

@@ -12,7 +12,7 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>JavaScript数据类型II 对象 | 僕と花</title>
+    <title>JavaScript函数I | 僕と花</title>
 
     <link rel="stylesheet" href="/css/meme.min.694160bc541ffcb01e6ec33f0d2659bac5d7a4cf64b378fe7c0dabfb28f9811f.css"/>
 
@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="Hiillos" /><meta name="description" content="对象（object） 对象（object）是JavaScript语言的核心概念，也是最……" />
+    <meta name="author" content="Hiillos" /><meta name="description" content="函数（function） 函数的声明方式 具名定义 1 2 3 4 5 6 7 8 9 function 函数名 (参数1,参……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -46,21 +46,21 @@
     
 
     
-    <link rel="canonical" href="https://ichirinsou.github.io/tech/210811/" />
+    <link rel="canonical" href="https://ichirinsou.github.io/tech/210902/" />
     
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "datePublished": "2021-08-11T23:01:04+08:00",
-        "dateModified": "2022-01-24T21:08:48+08:00",
-        "url": "https://ichirinsou.github.io/tech/210811/",
-        "headline": "JavaScript数据类型II 对象",
-        "description": "对象（object） 对象（object）是JavaScript语言的核心概念，也是最……",
+        "datePublished": "2021-09-02T01:08:56+08:00",
+        "dateModified": "2022-02-23T00:09:12+08:00",
+        "url": "https://ichirinsou.github.io/tech/210902/",
+        "headline": "JavaScript函数I",
+        "description": "函数（function） 函数的声明方式 具名定义 1 2 3 4 5 6 7 8 9 function 函数名 (参数1,参……",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  1938 ,
+        "wordCount":  1360 ,
         "author": {
             "@type": "Person",
             "description": "Hurricane, hurricane 🥀",
@@ -90,13 +90,13 @@
 
 
 
-<meta property="og:title" content="JavaScript数据类型II 对象" />
-<meta property="og:description" content="对象（object） 对象（object）是JavaScript语言的核心概念，也是最……" />
-<meta property="og:url" content="https://ichirinsou.github.io/tech/210811/" />
+<meta property="og:title" content="JavaScript函数I" />
+<meta property="og:description" content="函数（function） 函数的声明方式 具名定义 1 2 3 4 5 6 7 8 9 function 函数名 (参数1,参……" />
+<meta property="og:url" content="https://ichirinsou.github.io/tech/210902/" />
 <meta property="og:site_name" content="僕と花" />
 <meta property="og:locale" content="zh" /><meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2021-08-11T23:01:04&#43;08:00" />
-    <meta property="article:modified_time" content="2022-01-24T21:08:48&#43;08:00" />
+    <meta property="article:published_time" content="2021-09-02T01:08:56&#43;08:00" />
+    <meta property="article:modified_time" content="2022-02-23T00:09:12&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -188,7 +188,7 @@
 
         <article class="content post h-entry" data-align="justify" data-type="tech" data-toc-num="true">
 
-            <h1 class="post-title p-name">JavaScript数据类型II 对象</h1>
+            <h1 class="post-title p-name">JavaScript函数I</h1>
 
             
 
@@ -200,108 +200,33 @@
 
             <nav class="contents">
   <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
-    <li><a id="contents:对象object" href="#对象object">对象（object）</a>
+    <li><a id="contents:函数function" href="#函数function">函数（function）</a>
       <ol>
-        <li><a id="contents:对象的声明方式" href="#对象的声明方式">对象的声明方式</a></li>
-        <li><a id="contents:tips" href="#tips">Tips🎯</a></li>
+        <li><a id="contents:函数的声明方式" href="#函数的声明方式">函数的声明方式</a></li>
       </ol>
     </li>
-    <li><a id="contents:相关操作" href="#相关操作">相关操作</a>
+    <li><a id="contents:函数的要素" href="#函数的要素">函数的要素</a>
       <ol>
-        <li><a id="contents:删除对象的属性" href="#删除对象的属性">删除对象的属性</a></li>
-        <li><a id="contents:查看对象的属性" href="#查看对象的属性">查看对象的属性</a></li>
-        <li><a id="contents:修改或增加对象的属性" href="#修改或增加对象的属性">修改或增加对象的属性</a></li>
+        <li><a id="contents:执行时机" href="#执行时机">执行时机</a></li>
+        <li><a id="contents:作用域" href="#作用域">作用域</a></li>
+        <li><a id="contents:闭包" href="#闭包">闭包</a></li>
+        <li><a id="contents:形式参数" href="#形式参数">形式参数</a></li>
+        <li><a id="contents:返回值" href="#返回值">返回值</a></li>
+        <li><a id="contents:调用栈" href="#调用栈">调用栈</a></li>
+        <li><a id="contents:函数提升" href="#函数提升">函数提升</a></li>
+        <li><a id="contents:arguments--this" href="#arguments--this">arguments &amp; this</a></li>
       </ol>
     </li>
   </ol>
 </nav><div class="post-body e-content">
-                <h2 id="对象object"><a href="#对象object" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:对象object" class="headings">对象（object）</a></h2>
-<p>对象（object）是JavaScript语言的核心概念，也是最重要的数据类型。简单来说，对象就是一组<strong>键值对</strong>（key -value）的集合，是一种无序的复合数据集合。<a href="https://wangdoc.com/javascript/types/object.html#%E7%94%9F%E6%88%90%E6%96%B9%E6%B3%95" target="_blank" rel="noopener">[1]</a></p>
-<hr>
+                <h2 id="函数function"><a href="#函数function" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:函数function" class="headings">函数（function）</a></h2>
 <ol>
 <li>
-<h3 id="对象的声明方式"><a href="#对象的声明方式" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:对象的声明方式" class="headings">对象的声明方式</a></h3>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//正式的声明方式
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span> <span class="p">(</span> <span class="p">{</span> <span class="s1">&#39;name&#39;</span> <span class="o">:</span> <span class="s1">&#39;Yea Miko&#39;</span> <span class="p">,</span> <span class="s1">&#39;weapon&#39;</span> <span class="o">:</span> <span class="s1">&#39;Catalyst&#39;</span><span class="p">}</span> <span class="p">)</span>
-
-<span class="c1">//我们常用的声明方式
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;name&#39;</span> <span class="o">:</span> <span class="s1">&#39;Yea Miko&#39;</span> <span class="p">,</span> <span class="s1">&#39;weapon&#39;</span> <span class="o">:</span> <span class="s1">&#39;Catalyst&#39;</span><span class="p">}</span>
-
-<span class="c1">//匿名声明
-</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span><span class="s1">&#39;name&#39;</span> <span class="o">:</span> <span class="s1">&#39;Yea Miko&#39;</span> <span class="p">,</span> <span class="s1">&#39;weapon&#39;</span> <span class="o">:</span> <span class="s1">&#39;Catalyst&#39;</span><span class="p">})</span>    
-</code></pre></td></tr></table></div>
-</div>
-</div></li>
-<li>
-<h3 id="tips"><a href="#tips" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:tips" class="headings">Tips🎯</a></h3>
-<ul>
-<li><code>'name' : 'Yea Miko'</code>即是一组<strong>键值对（Key-Value）</strong>。<code>'name'</code>是Key，即对象的<strong>属性名</strong>。<code>'Yea Miko'</code>是Value，即对象的<strong>属性值</strong>。</li>
-<li>所有的键名（Key）都是<strong>字符串</strong>。它们并非标识符，可以包含任意字符。</li>
-<li><code>'name'</code>中的<code>''</code>是可以省略的，一旦省略，就只能声明符合标识符规则（字母或数字或下划线<code>_</code>或美元符号<code>$</code>）但可以以数字为开头的键名。</li>
-<li>就算省略了<code>''</code>，键名仍旧是<strong>字符串</strong>。</li>
-<li>如果属性名由科学记数法、非十进制数等等充当，JavaScript会优先计算它们的结果并转换为可读十进制数，<strong>再将其转化为字符串作为属性名</strong>。</li>
-<li>如果属性名由变量充当，则需要加<code>[ ]</code>表示，例<code>[name]</code>。</li>
-<li>每个对象都有一个隐藏属性，隐藏属性存储着<strong>原型</strong>的地址。</li>
-</ul>
-</li>
-</ol>
-<h2 id="相关操作"><a href="#相关操作" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:相关操作" class="headings">相关操作</a></h2>
-<hr>
+<h3 id="函数的声明方式"><a href="#函数的声明方式" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:函数的声明方式" class="headings">函数的声明方式</a></h3>
 <ol>
 <li>
-<h3 id="删除对象的属性"><a href="#删除对象的属性" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:删除对象的属性" class="headings">删除对象的属性</a></h3>
+<p>具名定义</p>
 <div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;Yea Miko&#39;</span> <span class="p">,</span> <span class="nx">weapon</span> <span class="o">:</span> <span class="s1">&#39;Catalyst&#39;</span><span class="p">}</span>
-
-<span class="k">delete</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span>
-<span class="k">delete</span> <span class="nx">obj</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
-<span class="c1">//删除对象obj的name属性（key&amp;value全部删除）
-</span><span class="c1"></span>
-<span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="kc">undefined</span>
-<span class="c1">//将obj的name属性值赋值为undefined，即删除了name的value
-</span></code></pre></td></tr></table></div>
-</div>
-</div><p>当我们对对象属性进行删除后，要判断是否删除成功，可以使用<code>in</code>来判断</p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;Yea Miko&#39;</span> <span class="p">,</span> <span class="nx">weapon</span> <span class="o">:</span> <span class="s1">&#39;Catalyst&#39;</span><span class="p">}</span>
-<span class="k">delete</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span>
-
-<span class="s1">&#39;name&#39;</span> <span class="k">in</span> <span class="nx">obj</span>
-<span class="c1">//返回false，则意味name属性不在对象obj中，删除成功
-</span></code></pre></td></tr></table></div>
-</div>
-</div><div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -314,53 +239,94 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;Yea Miko&#39;</span> <span class="p">,</span> <span class="nx">weapon</span> <span class="o">:</span> <span class="s1">&#39;Catalyst&#39;</span><span class="p">}</span>
-<span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="kc">undefined</span>
-
-<span class="s1">&#39;name&#39;</span> <span class="k">in</span> <span class="nx">obj</span> <span class="o">&amp;&amp;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="kc">undefined</span>
-<span class="c1">//返回true，则意味着name属性在对象obj中，但值为空
-</span><span class="c1"></span>
-<span class="c1">//单一的obj.x === undefined并不能判断x是否为obj的属性，如
-</span><span class="c1"></span><span class="nx">obj</span><span class="p">.</span><span class="nx">element</span> <span class="o">===</span> <span class="kc">undefined</span>
-<span class="c1">//返回true，因为对象里都没有element属性，值肯定为空啦😜
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">function</span> <span class="nx">函数名</span> <span class="p">(</span><span class="nx">参数1</span><span class="p">,</span><span class="nx">参数2</span><span class="p">){</span>
+    <span class="nx">语句</span>
+    <span class="k">return</span> <span class="nx">返回值</span>
+<span class="p">}</span>
+<span class="c1">//例
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">print</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//上述函数返回值 return undefined
 </span></code></pre></td></tr></table></div>
 </div>
 </div></li>
 <li>
-<h3 id="查看对象的属性"><a href="#查看对象的属性" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:查看对象的属性" class="headings">查看对象的属性</a></h3>
+<p>匿名定义</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;Yea Miko&#39;</span> <span class="p">,</span> <span class="nx">weapon</span> <span class="o">:</span> <span class="s1">&#39;Catalyst&#39;</span><span class="p">}</span>
-
-<span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
-<span class="c1">//返回[&#39;name&#39; , &#39;weapon&#39;]，查看自身所有属性名
-</span><span class="c1"></span>
-<span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
-<span class="c1">//返回[&#39;Yea Miko&#39;, &#39;Catalyst&#39;]，查看自身所有属性值
-</span><span class="c1"></span>
-<span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
-<span class="c1">//返回[Array(2), Array(2)]，查看自身可枚举属性的键值对数组
-</span><span class="c1"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
-<span class="c1">//查看自身所有属性+隐藏的共有属性（原型）
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//如果将具名函数的函数名去掉，就是匿名函数
+</span><span class="c1">//这种写法一般将一个匿名函数赋值给变量，这时这个匿名函数又称为函数表达式
+</span><span class="c1">//例
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">print</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></td></tr></table></div>
+</div>
+</div></li>
+<li>
+<p>箭头函数</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">let</span> <span class="nx">f1</span> <span class="o">=</span> <span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span><span class="o">+</span><span class="nx">x</span>
+<span class="kd">let</span> <span class="nx">f2</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">x</span><span class="o">+</span><span class="nx">y</span> <span class="c1">//( )不能省略
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">f3</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">x</span><span class="o">+</span><span class="nx">y</span> <span class="p">}</span><span class="c1">//若采用这种写法，{ }与return皆不可省略
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">f4</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">name</span> <span class="o">:</span> <span class="nx">x</span> <span class="p">,</span> <span class="nx">age</span> <span class="o">:</span> <span class="nx">y</span> <span class="p">})</span>
+<span class="c1">//在JS执行中遇到{ }会优先按照代码块处理
+</span><span class="c1">//直接返回对象就会出错，需要加( )处理
 </span></code></pre></td></tr></table></div>
 </div>
-</div><p>这里简单区分一下<code>in</code>与<code>hasOwnProperty</code>的区别，<code>in</code>无法判断属性为自身还是共有属性， 但<code>hasOwnProperty</code>可以。</p>
+</div></li>
+<li>
+<p>构造函数</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//所有的函数都是由Function构造出来的
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">print</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;console.log(s)&#39;</span><span class="p">)</span>
+<span class="c1">//等价于
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">print</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div></li>
+</ol>
+</li>
+</ol>
+<h2 id="函数的要素"><a href="#函数的要素" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:函数的要素" class="headings">函数的要素</a></h2>
+<ol>
+<li>
+<h3 id="执行时机"><a href="#执行时机" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:执行时机" class="headings">执行时机</a></h3>
+<p>简单来说，函数的调用时机不同，结果不同。</p>
+<p>详细指路👉🏻<a href="">JavaScript函数II 执行时机</a>🥳</p>
+</li>
+<li>
+<h3 id="作用域"><a href="#作用域" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:作用域" class="headings">作用域</a></h3>
+<p>每个函数都会默认创建一个作用域</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -372,89 +338,86 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"> <span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;Yea Miko&#39;</span> <span class="p">,</span> <span class="nx">weapon</span> <span class="o">:</span> <span class="s1">&#39;Catalyst&#39;</span><span class="p">}</span>
-
- <span class="s1">&#39;toString&#39;</span> <span class="k">in</span> <span class="nx">obj</span>
- <span class="c1">//返回true，toString在对象obj中
-</span><span class="c1"></span>
- <span class="nx">obj</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">toString</span><span class="p">)</span>
- <span class="c1">//返回false，toString不是对象obj的自身属性，是从原型中携带而来的共有属性。
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//例
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">fn</span><span class="p">(){</span>
+    <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span><span class="mi">1</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span><span class="c1">//a不存在
+</span><span class="c1">//即使fn执行，也访问不到作用域中的a
+</span><span class="c1">//let的作用域仅包含在离它最近的{ }内
 </span></code></pre></td></tr></table></div>
 </div>
-</div><p>时刻提醒自己<strong>属性名是字符串</strong>这一重要信息，才会在以下的列举中不会出错。</p>
+</div><ul>
+<li>
+<p>如果多个作用域都有同名变量a</p>
+<ol>
+<li>查找a的声明时，依照就近原则寻找作用域</li>
+<li>查找a的过程与函数执行无关，但a的取值与函数执行有关</li>
+</ol>
+</li>
+<li>
+<p>全局变量与局部变量</p>
+<ol>
+<li>在顶级作用域声明的变量是全局变量</li>
+<li>window的属性是全局变量
+其他都是局部变量</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="闭包"><a href="#闭包" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:闭包" class="headings">闭包</a></h3>
+<p>简单来说，如果一个函数用到了函数外的变量，那么这个函数+变量就组成了闭包。</p>
+<p>详细指路👉🏻<a href="">关于闭包的文章正在施工中👷...</a>🥳</p>
+</li>
+<li>
+<h3 id="形式参数"><a href="#形式参数" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:形式参数" class="headings">形式参数</a></h3>
+<ul>
+<li>
+<p>形式参数即非实际参数</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;fox&#39;</span>
-<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">:</span> <span class="s1">&#39;Yea Miko&#39;</span> <span class="p">,</span> <span class="nx">weapon</span> <span class="o">:</span> <span class="s1">&#39;Catalyst&#39;</span><span class="p">}</span>
-
-<span class="nx">obj</span><span class="p">.</span><span class="nx">name</span>
-<span class="c1">//返回undefined
-</span><span class="c1">//该语法下&#34;.&#34;后加的应该是真实的属性名fox（为字符串），而非变量名
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">x</span><span class="o">+</span><span class="nx">y</span>
+<span class="p">}</span><span class="c1">//x,y位形式参数
 </span><span class="c1"></span>
-<span class="nx">obj</span><span class="p">[</span><span class="nx">name</span><span class="p">]</span>
-<span class="c1">//返回&#39;Yea Miko&#39;，查看单个属性值
-</span><span class="c1"></span>
-<span class="nx">obj</span><span class="p">.</span><span class="nx">fox</span>
-<span class="c1">//返回&#39;Yea Miko&#39;，查看单个属性值
-</span><span class="c1"></span>
-<span class="nx">obj</span><span class="p">[</span><span class="s1">&#39;fox&#39;</span><span class="p">]</span>
-<span class="c1">//返回&#39;Yea Miko&#39;，查看单个属性值
+<span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="c1">//1,2是实际参数
 </span></code></pre></td></tr></table></div>
 </div>
 </div></li>
 <li>
-<h3 id="修改或增加对象的属性"><a href="#修改或增加对象的属性" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:修改或增加对象的属性" class="headings">修改或增加对象的属性</a></h3>
-<p>修改与增加基本同义：已有属性则改，无该属性则增。</p>
+<p>形式参数可认为是变量声明</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;Yea Miko&#39;</span><span class="p">}</span>
-
-<span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Yea Sakura&#39;</span>
-<span class="nx">obj</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Yea Sakura&#39;</span>
-<span class="nx">obj</span><span class="p">.</span><span class="nx">element</span> <span class="o">=</span> <span class="s1">&#39;Electro&#39;</span>
-<span class="c1">//无element属性，则新增
-</span><span class="c1"></span>
-<span class="c1">//若通过变量更改
-</span><span class="c1"></span><span class="nx">person</span> <span class="o">=</span> <span class="s1">&#39;name&#39;</span>
-<span class="nx">obj</span><span class="p">[</span><span class="nx">person</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Yea Sakura&#39;</span>
-
-<span class="c1">//批量赋值
-</span><span class="c1"></span><span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">obj</span> <span class="p">,</span> <span class="p">{</span> <span class="nx">weapon</span> <span class="o">:</span> <span class="s1">&#39;Catalyst&#39;</span> <span class="p">,</span> <span class="nx">rarity</span> <span class="o">:</span> <span class="mi">5</span> <span class="p">,</span> <span class="nx">element</span> <span class="o">:</span> <span class="s1">&#39;Electro&#39;</span> <span class="p">})</span>
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//上述代码等价于下列代码
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">add</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nx">x</span><span class="o">+</span><span class="nx">y</span>
+<span class="p">}</span>
 </code></pre></td></tr></table></div>
 </div>
-</div><p>如果涉及到与原型有关的修改操作……🤔</p>
+</div></li>
+</ul>
+</li>
+<li>
+<h3 id="返回值"><a href="#返回值" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:返回值" class="headings">返回值</a></h3>
+<p>每个函数都有返回值</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -468,62 +431,54 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">let</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="kd">let</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{}</span>
-
-<span class="nx">obj1</span><span class="p">.</span><span class="nx">toString</span> <span class="o">=</span> <span class="s1">&#39;chocolate&#39;</span>
-<span class="nx">obj2</span><span class="p">.</span><span class="nx">toString</span> <span class="o">===</span> <span class="s1">&#39;chocolate&#39;</span>
-<span class="c1">//返回false，可以见得我们无法通过一层去修改原型
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">function</span> <span class="nx">hi</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nx">hi</span><span class="p">()</span>
+<span class="c1">//省略了return，返回值为undefined
 </span><span class="c1"></span>
-<span class="nx">obj1</span><span class="p">.</span><span class="mi">__</span><span class="nx">proto__</span><span class="p">.</span><span class="nx">toString</span> <span class="o">=</span> <span class="s1">&#39;chocolate&#39;</span>
-<span class="nx">obj2</span><span class="p">.</span><span class="nx">toString</span> <span class="o">===</span> <span class="s1">&#39;chocolate&#39;</span>
-<span class="c1">//返回true，我们通过这种把隐藏属性调取出来并进行修改的操作，改变了共有的原型
-</span><span class="c1">//但是这是不推荐的写法，如果有修改的必要推荐使用⬇️
-</span><span class="c1"></span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span> <span class="o">=</span> <span class="s1">&#39; chocolate&#39;</span>
-<span class="nx">obj1</span><span class="p">.</span><span class="nx">toString</span> <span class="o">===</span> <span class="s1">&#39;chocolate&#39;</span>
-<span class="nx">obj2</span><span class="p">.</span><span class="nx">toString</span> <span class="o">===</span> <span class="s1">&#39;chocolate&#39;</span>
-<span class="c1">//返回true
+<span class="kd">function</span> <span class="nx">hi</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nx">hi</span><span class="p">()</span>
+<span class="c1">//返回值为console.log(&#39;hi&#39;)的值，即undefined（hi是打印出来的值）
 </span></code></pre></td></tr></table></div>
 </div>
-</div><p><strong>但是我们一般不要修改原型，否则会引来各种意想不到的崩溃😡</strong></p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">let</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="kd">let</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{}</span>
-
-<span class="nx">obj1</span><span class="p">.</span><span class="mi">__</span><span class="nx">proto__</span> <span class="o">=</span> <span class="nx">obj2</span>
-<span class="s1">&#39;toString&#39;</span> <span class="k">in</span> <span class="nx">obj1</span>
-<span class="c1">//返回true
-</span><span class="c1">//虽然我们修改了obj1的隐藏属性，指向了对象obj2
-</span><span class="c1">//但是因为对象obj2中仍然有原型存在，我们仍旧可以调用toString
-</span><span class="c1">//这仍旧是不推荐的写法，如果想要声明一个拥有此类原型链的对象⬇️
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="kd">let</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">obj2</span><span class="p">)</span>
-<span class="c1">//以obj2为原型构造对象
-</span></code></pre></td></tr></table></div>
-</div>
-</div><p>如果一定要对原型进行修改，那么应该从一开始声明对象时就进行，不要“半路出家”，不然可能会乱成一锅粥😅</p>
-<p>对<strong>原型</strong>仍旧存在一些疑问的话，可以看看<del>这篇唠叨</del>（目前正在施工中👷，施工完成后会附上链接）</p>
+</div><p>函数执行完毕后才会返回，只有函数有返回值</p>
+</li>
+<li>
+<h3 id="调用栈"><a href="#调用栈" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:调用栈" class="headings">调用栈</a></h3>
+<p>简单来说，JS引擎在调用一个函数前，需要把函数所在的环境压进一个数组中，这个数组就叫做调用栈。</p>
+<p>等到函数执行完毕，就会把压进栈中的环境弹出来，返回至之前的环境，继续执行后续代码。</p>
+</li>
+<li>
+<h3 id="函数提升"><a href="#函数提升" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:函数提升" class="headings">函数提升</a></h3>
+<p>在JavaScript中，函数是“一等公民”。</p>
+<blockquote>
+<p>JavaScript 引擎将函数名视同变量名，所以采用function命令声明函数时，整个函数会像变量声明一样，被提升到代码头部。<a href="https://wangdoc.com/javascript/types/function.html#%E5%87%BD%E6%95%B0%E5%90%8D%E7%9A%84%E6%8F%90%E5%8D%87" target="_blank" rel="noopener">[1]</a></p>
+</blockquote>
+</li>
+<li>
+<h3 id="arguments--this"><a href="#arguments--this" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:arguments--this" class="headings">arguments &amp; this</a></h3>
+<p>简单来说，</p>
+<ul>
+<li>arguments
+<ul>
+<li>即调用函数时所传入的实际参数</li>
+<li>arguments是包含所有参数的<strong>伪数组</strong></li>
+</ul>
+</li>
+<li>this
+<ul>
+<li>一般可以理解为this是“隐藏参数”，是当我们构造函数的时候，会经常需要调用的还没来得及定义的函数的名字</li>
+<li>目前可以使用<code>fn.call(chocolate,1,2,3)</code>来传this和arguments。其中<code>chocolate</code>为this，剩下的<code>1,2,3</code>是arguments。在这种定义上，this就是第一个参数，arguments是后面的所有参数。</li>
+</ul>
+</li>
+</ul>
+<p>这是JavsScript较为难理解的一个概念，在后续更新中，为了防止this带来更多的“困扰”，箭头函数<code>=&gt;</code>是没有this的。</p>
+<p>详细指路👉🏻<a href="">关于this&amp;arguments的文章正在施工中👷...</a>🥳</p>
 </li>
 </ol>
 
@@ -579,13 +534,9 @@
     
         <ul class="post-nav">
             
-                <li class="post-nav-prev">
-                    <a href="/tech/210902/" rel="prev">&lt; JavaScript函数I</a>
-                </li>
-            
             
                 <li class="post-nav-next">
-                    <a href="/tech/210722/" rel="next">JavaScript基础语法 &gt;</a>
+                    <a href="/tech/210811/" rel="next">JavaScript数据类型II 对象 &gt;</a>
                 </li>
             
         </ul>

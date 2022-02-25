@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-02-23T00:09:20&#43;08:00</updated>
+    <updated>2022-02-25T22:56:17&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -20,16 +20,17 @@
             <title type="text">JavaScript函数I</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210902/" />
             <id>https://ichirinsou.github.io/tech/210902/</id>
-            <updated>2022-02-23T00:09:12&#43;08:00</updated>
+            <updated>2022-02-23T02:14:11&#43;08:00</updated>
             <published>2021-09-02T01:08:56&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
                     <uri>https://ichirinsou.github.io/</uri>
                     <email>evie.hiillos@gmail.com</email>
                     </author>
-            <summary type="html">函数（function） 函数的声明方式 具名定义 1 2 3 4 5 6 7 8 9 function 函数名 (参数1,参……</summary>
+            <summary type="html">函数（function） 函数是一段可以反复调用的代码块。函数还能接受输入的参数，不同……</summary>
             
                 <content type="html">&lt;h2 id=&#34;函数function&#34;&gt;函数（function）&lt;/h2&gt;
+&lt;p&gt;函数是一段可以反复调用的代码块。函数还能接受输入的参数，不同的参数会返回不同的值。&lt;a href=&#34;https://wangdoc.com/javascript/types/function.html&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;函数的声明方式&#34;&gt;函数的声明方式&lt;/h3&gt;
@@ -132,7 +133,7 @@
 &lt;li&gt;
 &lt;h3 id=&#34;执行时机&#34;&gt;执行时机&lt;/h3&gt;
 &lt;p&gt;简单来说，函数的调用时机不同，结果不同。&lt;/p&gt;
-&lt;p&gt;详细指路👉🏻&lt;a href=&#34;&#34;&gt;JavaScript函数II 执行时机&lt;/a&gt;🥳&lt;/p&gt;
+&lt;p&gt;详细指路👉🏻&lt;a href=&#34;http://www.hiillos.ink/tech/210903/&#34;&gt;《JavaScript函数II 执行时机》&lt;/a&gt;🥳&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;作用域&#34;&gt;作用域&lt;/h3&gt;
@@ -267,7 +268,7 @@
 &lt;h3 id=&#34;函数提升&#34;&gt;函数提升&lt;/h3&gt;
 &lt;p&gt;在JavaScript中，函数是“一等公民”。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;JavaScript 引擎将函数名视同变量名，所以采用function命令声明函数时，整个函数会像变量声明一样，被提升到代码头部。&lt;a href=&#34;https://wangdoc.com/javascript/types/function.html#%E5%87%BD%E6%95%B0%E5%90%8D%E7%9A%84%E6%8F%90%E5%8D%87&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;JavaScript 引擎将函数名视同变量名，所以采用function命令声明函数时，整个函数会像变量声明一样，被提升到代码头部。&lt;a href=&#34;https://wangdoc.com/javascript/types/function.html#%E5%87%BD%E6%95%B0%E5%90%8D%E7%9A%84%E6%8F%90%E5%8D%87&#34;&gt;[2]&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;

@@ -12,7 +12,7 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>JavaScript函数I | 僕と花</title>
+    <title>JavaScript函数II 执行时机 | 僕と花</title>
 
     <link rel="stylesheet" href="/css/meme.min.694160bc541ffcb01e6ec33f0d2659bac5d7a4cf64b378fe7c0dabfb28f9811f.css"/>
 
@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="Hiillos" /><meta name="description" content="函数（function） 函数是一段可以反复调用的代码块。函数还能接受输入的参数，不同……" />
+    <meta name="author" content="Hiillos" /><meta name="description" content="所谓运行机制与执行时机 了解进程与线程 进程是系统资源分配的最小单位 进程包括进行中的程序……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -46,21 +46,21 @@
     
 
     
-    <link rel="canonical" href="https://ichirinsou.github.io/tech/210902/" />
+    <link rel="canonical" href="https://ichirinsou.github.io/tech/210903/" />
     
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "datePublished": "2021-09-02T01:08:56+08:00",
-        "dateModified": "2022-02-23T02:14:11+08:00",
-        "url": "https://ichirinsou.github.io/tech/210902/",
-        "headline": "JavaScript函数I",
-        "description": "函数（function） 函数是一段可以反复调用的代码块。函数还能接受输入的参数，不同……",
+        "datePublished": "2021-09-03T01:11:02+08:00",
+        "dateModified": "2022-03-02T05:42:26+08:00",
+        "url": "https://ichirinsou.github.io/tech/210903/",
+        "headline": "JavaScript函数II 执行时机",
+        "description": "所谓运行机制与执行时机 了解进程与线程 进程是系统资源分配的最小单位 进程包括进行中的程序……",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  1406 ,
+        "wordCount":  1811 ,
         "author": {
             "@type": "Person",
             "description": "Hurricane, hurricane 🥀",
@@ -90,13 +90,13 @@
 
 
 
-<meta property="og:title" content="JavaScript函数I" />
-<meta property="og:description" content="函数（function） 函数是一段可以反复调用的代码块。函数还能接受输入的参数，不同……" />
-<meta property="og:url" content="https://ichirinsou.github.io/tech/210902/" />
+<meta property="og:title" content="JavaScript函数II 执行时机" />
+<meta property="og:description" content="所谓运行机制与执行时机 了解进程与线程 进程是系统资源分配的最小单位 进程包括进行中的程序……" />
+<meta property="og:url" content="https://ichirinsou.github.io/tech/210903/" />
 <meta property="og:site_name" content="僕と花" />
 <meta property="og:locale" content="zh" /><meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2021-09-02T01:08:56&#43;08:00" />
-    <meta property="article:modified_time" content="2022-02-23T02:14:11&#43;08:00" />
+    <meta property="article:published_time" content="2021-09-03T01:11:02&#43;08:00" />
+    <meta property="article:modified_time" content="2022-03-02T05:42:26&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -188,7 +188,7 @@
 
         <article class="content post h-entry" data-align="justify" data-type="tech" data-toc-num="true">
 
-            <h1 class="post-title p-name">JavaScript函数I</h1>
+            <h1 class="post-title p-name">JavaScript函数II 执行时机</h1>
 
             
 
@@ -200,201 +200,61 @@
 
             <nav class="contents">
   <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
-    <li><a id="contents:函数function" href="#函数function">函数（function）</a>
+    <li><a id="contents:所谓运行机制与执行时机" href="#所谓运行机制与执行时机">所谓运行机制与执行时机</a>
       <ol>
-        <li><a id="contents:函数的声明方式" href="#函数的声明方式">函数的声明方式</a></li>
+        <li><a id="contents:了解进程与线程" href="#了解进程与线程">了解进程与线程</a></li>
+        <li><a id="contents:javascript是一门单线程语言" href="#javascript是一门单线程语言">JavaScript是一门单线程语言</a></li>
+        <li><a id="contents:了解同步异步与回调" href="#了解同步异步与回调">了解同步、异步与回调</a></li>
+        <li><a id="contents:何谓执行时机" href="#何谓执行时机">何谓「执行时机」？</a></li>
       </ol>
     </li>
-    <li><a id="contents:函数的要素" href="#函数的要素">函数的要素</a>
+    <li><a id="contents:举例分析" href="#举例分析">举例分析</a>
       <ol>
-        <li><a id="contents:执行时机" href="#执行时机">执行时机</a></li>
-        <li><a id="contents:作用域" href="#作用域">作用域</a></li>
-        <li><a id="contents:闭包" href="#闭包">闭包</a></li>
-        <li><a id="contents:形式参数" href="#形式参数">形式参数</a></li>
-        <li><a id="contents:返回值" href="#返回值">返回值</a></li>
-        <li><a id="contents:调用栈" href="#调用栈">调用栈</a></li>
-        <li><a id="contents:函数提升" href="#函数提升">函数提升</a></li>
-        <li><a id="contents:arguments--this" href="#arguments--this">arguments &amp; this</a></li>
+        <li><a id="contents:为什么下列代码会打印出6-6-6-6-6-6" href="#为什么下列代码会打印出6-6-6-6-6-6">为什么下列代码会打印出「6 6 6 6 6 6」</a></li>
+        <li><a id="contents:如何让这列代码打印出0-1-2-3-4-5" href="#如何让这列代码打印出0-1-2-3-4-5">如何让这列代码打印出「0 1 2 3 4 5」</a></li>
+        <li><a id="contents:除了使用for-let还有什么方法可以打印出0-1-2-3-4-5" href="#除了使用for-let还有什么方法可以打印出0-1-2-3-4-5">除了使用for let，还有什么方法可以打印出「0 1 2 3 4 5」</a></li>
       </ol>
     </li>
   </ol>
 </nav><div class="post-body e-content">
-                <h2 id="函数function"><a href="#函数function" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:函数function" class="headings">函数（function）</a></h2>
-<p>函数是一段可以反复调用的代码块。函数还能接受输入的参数，不同的参数会返回不同的值。<a href="https://wangdoc.com/javascript/types/function.html" target="_blank" rel="noopener">[1]</a></p>
+                <h2 id="所谓运行机制与执行时机"><a href="#所谓运行机制与执行时机" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:所谓运行机制与执行时机" class="headings">所谓运行机制与执行时机</a></h2>
 <ol>
 <li>
-<h3 id="函数的声明方式"><a href="#函数的声明方式" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:函数的声明方式" class="headings">函数的声明方式</a></h3>
-<ol>
-<li>
-<p>具名定义</p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">function</span> <span class="nx">函数名</span> <span class="p">(</span><span class="nx">参数1</span><span class="p">,</span><span class="nx">参数2</span><span class="p">){</span>
-    <span class="nx">语句</span>
-    <span class="k">return</span> <span class="nx">返回值</span>
-<span class="p">}</span>
-<span class="c1">//例
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">print</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="c1">//上述函数返回值 return undefined
-</span></code></pre></td></tr></table></div>
-</div>
-</div></li>
-<li>
-<p>匿名定义</p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//如果将具名函数的函数名去掉，就是匿名函数
-</span><span class="c1">//这种写法一般将一个匿名函数赋值给变量，这时这个匿名函数又称为函数表达式
-</span><span class="c1">//例
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">print</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
-<span class="p">};</span>
-</code></pre></td></tr></table></div>
-</div>
-</div></li>
-<li>
-<p>箭头函数</p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">let</span> <span class="nx">f1</span> <span class="o">=</span> <span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span><span class="o">+</span><span class="nx">x</span>
-<span class="kd">let</span> <span class="nx">f2</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">x</span><span class="o">+</span><span class="nx">y</span> <span class="c1">//( )不能省略
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">f3</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">x</span><span class="o">+</span><span class="nx">y</span> <span class="p">}</span><span class="c1">//若采用这种写法，{ }与return皆不可省略
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">f4</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">name</span> <span class="o">:</span> <span class="nx">x</span> <span class="p">,</span> <span class="nx">age</span> <span class="o">:</span> <span class="nx">y</span> <span class="p">})</span>
-<span class="c1">//在JS执行中遇到{ }会优先按照代码块处理
-</span><span class="c1">//直接返回对象就会出错，需要加( )处理
-</span></code></pre></td></tr></table></div>
-</div>
-</div></li>
-<li>
-<p>构造函数</p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//所有的函数都是由Function构造出来的
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">print</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;console.log(s)&#39;</span><span class="p">)</span>
-<span class="c1">//等价于
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">print</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
-</div>
-</div></li>
-</ol>
-</li>
-</ol>
-<h2 id="函数的要素"><a href="#函数的要素" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:函数的要素" class="headings">函数的要素</a></h2>
-<ol>
-<li>
-<h3 id="执行时机"><a href="#执行时机" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:执行时机" class="headings">执行时机</a></h3>
-<p>简单来说，函数的调用时机不同，结果不同。</p>
-<p>详细指路👉🏻<a href="http://www.hiillos.ink/tech/210903/" target="_blank" rel="noopener">《JavaScript函数II 执行时机》</a>🥳</p>
-</li>
-<li>
-<h3 id="作用域"><a href="#作用域" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:作用域" class="headings">作用域</a></h3>
-<p>每个函数都会默认创建一个作用域</p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//例
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">fn</span><span class="p">(){</span>
-    <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span><span class="mi">1</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span><span class="c1">//a不存在
-</span><span class="c1">//即使fn执行，也访问不到作用域中的a
-</span><span class="c1">//let的作用域仅包含在离它最近的{ }内
-</span></code></pre></td></tr></table></div>
-</div>
-</div><ul>
-<li>
-<p>如果多个作用域都有同名变量a</p>
-<ol>
-<li>查找a的声明时，依照就近原则寻找作用域</li>
-<li>查找a的过程与函数执行无关，但a的取值与函数执行有关</li>
-</ol>
-</li>
-<li>
-<p>全局变量与局部变量</p>
-<ol>
-<li>在顶级作用域声明的变量是全局变量</li>
-<li>window的属性是全局变量
-其他都是局部变量</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>
-<h3 id="闭包"><a href="#闭包" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:闭包" class="headings">闭包</a></h3>
-<p>简单来说，如果一个函数用到了函数外的变量，那么这个函数+变量就组成了闭包。</p>
-<p>详细指路👉🏻<a href="">关于闭包的文章正在施工中👷...</a>🥳</p>
-</li>
-<li>
-<h3 id="形式参数"><a href="#形式参数" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:形式参数" class="headings">形式参数</a></h3>
+<h3 id="了解进程与线程"><a href="#了解进程与线程" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:了解进程与线程" class="headings">了解进程与线程</a></h3>
 <ul>
+<li><strong>进程</strong>是系统资源分配的最小单位</li>
+<li>进程包括进行中的程序和程序所使用到的内存与系统资源</li>
+<li><strong>线程</strong>是cpu调度的最小单位</li>
+<li>线程是程序中的一个执行流，一个进程中可以有多个线程</li>
+</ul>
+</li>
 <li>
-<p>形式参数即非实际参数</p>
-<div class="highlight"><div class="chroma">
-<div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">){</span>
-    <span class="k">return</span> <span class="nx">x</span><span class="o">+</span><span class="nx">y</span>
-<span class="p">}</span><span class="c1">//x,y位形式参数
-</span><span class="c1"></span>
-<span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="c1">//1,2是实际参数
-</span></code></pre></td></tr></table></div>
-</div>
-</div></li>
+<h3 id="javascript是一门单线程语言"><a href="#javascript是一门单线程语言" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:javascript是一门单线程语言" class="headings">JavaScript是一门单线程语言</a></h3>
+<ul>
+<li>浏览器是多进程的，每打开一个tab页面，一般来说就会产生一个Renderer进程</li>
+<li>而浏览器同时只允许一个JS引擎线程运行JS程序，所以JavaScript是单线程运行的</li>
+<li>JavaScript之所以是一门单线程语言，与它的用途有关，避免了很多复杂的同步问题</li>
+</ul>
+</li>
 <li>
-<p>形式参数可认为是变量声明</p>
+<h3 id="了解同步异步与回调"><a href="#了解同步异步与回调" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:了解同步异步与回调" class="headings">了解同步、异步与回调</a></h3>
+<ul>
+<li>JS任务分为同步任务和异步任务</li>
+<li>同步任务在主线程（即JS引擎）上排队执行，只有前一个任务执行完毕才会执行下一个任务</li>
+<li>异步任务不进入主线程，会交给相应的异步处理模块处理异步需要的操作，处理完毕后会在任务队列中注册事件回调函数</li>
+<li>当主线程执行栈任务清空后，会自动读取任务队列将回调的异步任务添加到执行栈中开始执行</li>
+</ul>
+<p>上述内容只是非常简单的列举了几点，有关于同步异步事件循环宏微任务的详细内容暂时不在本篇篇幅内赘述，但是可以参考阅读一下这篇文章：<a href="https://juejin.cn/post/6844904050543034376" target="_blank" rel="noopener">「硬核JS」一次搞懂JS运行机制</a>。</p>
+</li>
+<li>
+<h3 id="何谓执行时机"><a href="#何谓执行时机" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:何谓执行时机" class="headings">何谓「执行时机」？</a></h3>
+<p>总得来说，当定义但并没有调用的时候，函数是不会执行的。而调用才是真正的执行了函数，且<strong>调用函数的时机不同，结果不同</strong>。</p>
+</li>
+</ol>
+<h2 id="举例分析"><a href="#举例分析" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:举例分析" class="headings">举例分析</a></h2>
+<ol>
+<li>
+<h3 id="为什么下列代码会打印出6-6-6-6-6-6"><a href="#为什么下列代码会打印出6-6-6-6-6-6" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:为什么下列代码会打印出6-6-6-6-6-6" class="headings">为什么下列代码会打印出「6 6 6 6 6 6」</a></h3>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -405,20 +265,63 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//上述代码等价于下列代码
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">add</span><span class="p">(){</span>
-    <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">return</span> <span class="nx">x</span><span class="o">+</span><span class="nx">y</span>
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">setTimeout</span><span class="p">(()=&gt;{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="p">},</span><span class="mi">0</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></td></tr></table></div>
 </div>
-</div></li>
-</ul>
+</div><p>在这部分代码中，我们可以根据顺序来看，首先使用<code>let</code>指令声明了一个变量<code>i</code>，然后进入了<code>for</code>循环，判断条件为<code>i&lt;6</code>。首次循环至内部，触发<code>setTimeout</code>函数，这对JS引擎来说是一个<strong>异步任务</strong>，并不会在主线程上执行，而是交给相应的定时器触发线程处理时间间隔（低于4毫秒的间隔按照4毫秒计时），计时完毕后，将内部需要执行的函数回调给事件触发线程，并列入<strong>事件队列</strong>等待执行。需要注意的是，异步任务并不会“堵塞”同步任务的执行进程，所以<code>for</code>循环还会继续执行，累加后进入下一次循环。</p>
+<p>当<code>i=1</code>进入下一次循环时，就会发现又遇到这个<code>setTimeout</code>函数了！是的，它将再一次从主线程中“抽离”，经由异步处理进入事件队列等待执行。也就是说，直到<code>i=6</code>跳出这个<code>for</code>循环时，<code>for</code>“空转”了6次。</p>
+<p>现在主线程的同步任务全部执行完毕了，JS引擎便会问询事件触发线程，将事件队列中的回调函数加入主线程执行栈开始执行。事件队列中一共有6个需要执行的回调函数，代入后此时我们的最终值<code>i=6</code>，所以会打印出「6 6 6 6 6 6」。</p>
 </li>
 <li>
-<h3 id="返回值"><a href="#返回值" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:返回值" class="headings">返回值</a></h3>
-<p>每个函数都有返回值</p>
+<h3 id="如何让这列代码打印出0-1-2-3-4-5"><a href="#如何让这列代码打印出0-1-2-3-4-5" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:如何让这列代码打印出0-1-2-3-4-5" class="headings">如何让这列代码打印出「0 1 2 3 4 5」</a></h3>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//在ES6的语法更新中，使用for let可以让代码打印出符合「常识」的结果
+</span><span class="c1"></span><span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">setTimeout</span><span class="p">(()=&gt;{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="p">},</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>通过「6 6 6 6 6 6」的“魔咒”，应该不难发现我们最后执行的<code>i</code>只有<strong>一个</strong>。而我们希望的是，每一次进到循环内部在<code>i</code>分别等于 0 1 2 3 4 5时，它的值都会好好的传给延迟函数，也就是<strong>封闭每次迭代的作用域</strong>。</p>
+<p>所以<code>let</code>出现了，它不仅劫持了这块作用域（甚至劫持了整整6次😂），而且在<code>for</code>循环的头部使用<code>let</code>声明还存在着一个特殊的行为：每次迭代都会声明，每个迭代都会使用上一个迭代结束时的值来初始化变量。</p>
+</li>
+<li>
+<h3 id="除了使用for-let还有什么方法可以打印出0-1-2-3-4-5"><a href="#除了使用for-let还有什么方法可以打印出0-1-2-3-4-5" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:除了使用for-let还有什么方法可以打印出0-1-2-3-4-5" class="headings">除了使用for let，还有什么方法可以打印出「0 1 2 3 4 5」</a></h3>
+<p>这么说也许还有些令人困惑🤔，那么不用<code>for let</code>头部完成这个操作应该如何呢？</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="c1">//让我们回到最初的起点
+</span><span class="c1"></span><span class="k">for</span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">setTimeout</span><span class="p">(()=&gt;{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="p">},</span><span class="mi">0</span><span class="p">)</span>   
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>我们的目标是封闭函数所在的作用域，获得每次迭代的值，使最后回调函数执行的时候依旧可以引用到我们亲手封闭的<strong>作用域</strong>。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -431,55 +334,46 @@
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
-</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">function</span> <span class="nx">hi</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="k">for</span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">flag</span><span class="p">){</span>
+            <span class="nx">setTimeout</span><span class="p">(()=&gt;{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">flag</span><span class="p">)</span>
+            <span class="p">},</span><span class="mi">0</span><span class="p">)</span>
+        <span class="p">})(</span><span class="nx">i</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="nx">hi</span><span class="p">()</span>
-<span class="c1">//省略了return，返回值为undefined
-</span><span class="c1"></span>
-<span class="kd">function</span> <span class="nx">hi</span><span class="p">(){</span>
-    <span class="k">return</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="nx">hi</span><span class="p">()</span>
-<span class="c1">//返回值为console.log(&#39;hi&#39;)的值，即undefined（hi是打印出来的值）
+<span class="c1">//这里使用了立即执行函数表达式（IIFE）来完成
+</span><span class="c1">//通过循环将i的当前值作为参数传入function，建立一个匿名函数对其内容进行包装（创建并封闭作用域）
+</span><span class="c1">//当然别忘了执行，不然为啥叫IIFE，不执行只是定义了而已🤪
 </span></code></pre></td></tr></table></div>
 </div>
-</div><p>函数执行完毕后才会返回，只有函数有返回值</p>
-</li>
-<li>
-<h3 id="调用栈"><a href="#调用栈" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:调用栈" class="headings">调用栈</a></h3>
-<p>简单来说，JS引擎在调用一个函数前，需要把函数所在的环境压进一个数组中，这个数组就叫做调用栈。</p>
-<p>等到函数执行完毕，就会把压进栈中的环境弹出来，返回至之前的环境，继续执行后续代码。</p>
-</li>
-<li>
-<h3 id="函数提升"><a href="#函数提升" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:函数提升" class="headings">函数提升</a></h3>
-<p>在JavaScript中，函数是“一等公民”。</p>
-<blockquote>
-<p>JavaScript 引擎将函数名视同变量名，所以采用function命令声明函数时，整个函数会像变量声明一样，被提升到代码头部。<a href="https://wangdoc.com/javascript/types/function.html#%E5%87%BD%E6%95%B0%E5%90%8D%E7%9A%84%E6%8F%90%E5%8D%87" target="_blank" rel="noopener">[2]</a></p>
-</blockquote>
-</li>
-<li>
-<h3 id="arguments--this"><a href="#arguments--this" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:arguments--this" class="headings">arguments &amp; this</a></h3>
-<p>简单来说，</p>
-<ul>
-<li>arguments
-<ul>
-<li>即调用函数时所传入的实际参数</li>
-<li>arguments是包含所有参数的<strong>伪数组</strong></li>
-</ul>
-</li>
-<li>this
-<ul>
-<li>一般可以理解为this是“隐藏参数”，是当我们构造函数的时候，会经常需要调用的还没来得及定义的函数的名字</li>
-<li>目前可以使用<code>fn.call(chocolate,1,2,3)</code>来传this和arguments。其中<code>chocolate</code>为this，剩下的<code>1,2,3</code>是arguments。在这种定义上，this就是第一个参数，arguments是后面的所有参数。</li>
-</ul>
-</li>
-</ul>
-<p>这是JavsScript较为难理解的一个概念，在后续更新中，为了防止this带来更多的“困扰”，箭头函数<code>=&gt;</code>是没有this的。</p>
-<p>详细指路👉🏻<a href="">关于this&amp;arguments的文章正在施工中👷...</a>🥳</p>
+</div><p>再优化一点点，相信就可以看出<code>let</code>在扮演什么样的角色了⬇️</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"> <span class="k">for</span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="kd">let</span> <span class="nx">flag</span> <span class="o">=</span> <span class="nx">i</span>
+    <span class="nx">setTimeout</span><span class="p">(()=&gt;{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">flag</span><span class="p">)</span>
+     <span class="p">},</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">//是的，let自己就创建了一个封闭作用域
+</span><span class="c1">//并且声明了一个在这作用域中有生命力的变量
+</span></code></pre></td></tr></table></div>
+</div>
+</div><p>就是这样。</p>
+<p>写到这里我虽然没有明确的说出来，但是这里面充满了闭包。而这也只是我所认知到的闭包（的一部分），即一个内部函数无论以什么方式被引用至作用域外，它仍然可以访问定义自己的作用域。我听见闭包现在正对我说：“孩子，听叔一句劝，这里的水太深，你把握不住。”</p>
+<p>等我把握得住了，再来详细说一说。</p>
 </li>
 </ol>
 
@@ -535,13 +429,9 @@
     
         <ul class="post-nav">
             
-                <li class="post-nav-prev">
-                    <a href="/tech/210903/" rel="prev">&lt; JavaScript函数II 执行时机</a>
-                </li>
-            
             
                 <li class="post-nav-next">
-                    <a href="/tech/210811/" rel="next">JavaScript数据类型II 对象 &gt;</a>
+                    <a href="/tech/210902/" rel="next">JavaScript函数I &gt;</a>
                 </li>
             
         </ul>

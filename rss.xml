@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Wed, 02 Mar 2022 05:45:29 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 27 Mar 2022 23:58:50 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -92,7 +92,7 @@
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在这部分代码中，我们可以根据顺序来看，首先使用&lt;code&gt;let&lt;/code&gt;指令声明了一个变量&lt;code&gt;i&lt;/code&gt;，然后进入了&lt;code&gt;for&lt;/code&gt;循环，判断条件为&lt;code&gt;i&amp;lt;6&lt;/code&gt;。首次循环至内部，触发&lt;code&gt;setTimeout&lt;/code&gt;函数，这对JS引擎来说是一个&lt;strong&gt;异步任务&lt;/strong&gt;，并不会在主线程上执行，而是交给相应的定时器触发线程处理时间间隔（低于4毫秒的间隔按照4毫秒计时），计时完毕后，将内部需要执行的函数回调给事件触发线程，并列入&lt;strong&gt;事件队列&lt;/strong&gt;等待执行。需要注意的是，异步任务并不会“堵塞”同步任务的执行进程，所以&lt;code&gt;for&lt;/code&gt;循环还会继续执行，累加后进入下一次循环。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;在这部分代码中，我们可以根据顺序来看，首先使用&lt;code&gt;let&lt;/code&gt;指令声明了一个变量&lt;code&gt;i&lt;/code&gt;，然后进入了&lt;code&gt;for&lt;/code&gt;循环，判断条件为&lt;code&gt;i&amp;lt;6&lt;/code&gt;。首次循环至内部，触发&lt;code&gt;setTimeout&lt;/code&gt;函数，这对JS引擎来说是一个&lt;strong&gt;异步任务&lt;/strong&gt;，并不会在主线程上执行，而是交给相应的定时器触发线程处理时间间隔，计时完毕后，将内部需要执行的函数回调给事件触发线程，并列入&lt;strong&gt;事件队列&lt;/strong&gt;等待执行。需要注意的是，异步任务并不会“堵塞”同步任务的执行进程，所以&lt;code&gt;for&lt;/code&gt;循环还会继续执行，累加后进入下一次循环。&lt;/p&gt;
 &lt;p&gt;当&lt;code&gt;i=1&lt;/code&gt;进入下一次循环时，就会发现又遇到这个&lt;code&gt;setTimeout&lt;/code&gt;函数了！是的，它将再一次从主线程中“抽离”，经由异步处理进入事件队列等待执行。也就是说，直到&lt;code&gt;i=6&lt;/code&gt;跳出这个&lt;code&gt;for&lt;/code&gt;循环时，&lt;code&gt;for&lt;/code&gt;“空转”了6次。&lt;/p&gt;
 &lt;p&gt;现在主线程的同步任务全部执行完毕了，JS引擎便会问询事件触发线程，将事件队列中的回调函数加入主线程执行栈开始执行。事件队列中一共有6个需要执行的回调函数，代入后此时我们的最终值&lt;code&gt;i=6&lt;/code&gt;，所以会打印出「6 6 6 6 6 6」。&lt;/p&gt;
 &lt;/li&gt;

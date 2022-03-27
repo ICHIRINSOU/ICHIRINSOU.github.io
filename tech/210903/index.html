@@ -54,13 +54,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-09-03T01:11:02+08:00",
-        "dateModified": "2022-03-02T05:42:26+08:00",
+        "dateModified": "2022-03-27T23:58:24+08:00",
         "url": "https://ichirinsou.github.io/tech/210903/",
         "headline": "JavaScript函数II 执行时机",
         "description": "所谓运行机制与执行时机 了解进程与线程 进程是系统资源分配的最小单位 进程包括进行中的程序……",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  1811 ,
+        "wordCount":  1794 ,
         "author": {
             "@type": "Person",
             "description": "Hurricane, hurricane 🥀",
@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="僕と花" />
 <meta property="og:locale" content="zh" /><meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-09-03T01:11:02&#43;08:00" />
-    <meta property="article:modified_time" content="2022-03-02T05:42:26&#43;08:00" />
+    <meta property="article:modified_time" content="2022-03-27T23:58:24&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -273,7 +273,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table></div>
 </div>
-</div><p>在这部分代码中，我们可以根据顺序来看，首先使用<code>let</code>指令声明了一个变量<code>i</code>，然后进入了<code>for</code>循环，判断条件为<code>i&lt;6</code>。首次循环至内部，触发<code>setTimeout</code>函数，这对JS引擎来说是一个<strong>异步任务</strong>，并不会在主线程上执行，而是交给相应的定时器触发线程处理时间间隔（低于4毫秒的间隔按照4毫秒计时），计时完毕后，将内部需要执行的函数回调给事件触发线程，并列入<strong>事件队列</strong>等待执行。需要注意的是，异步任务并不会“堵塞”同步任务的执行进程，所以<code>for</code>循环还会继续执行，累加后进入下一次循环。</p>
+</div><p>在这部分代码中，我们可以根据顺序来看，首先使用<code>let</code>指令声明了一个变量<code>i</code>，然后进入了<code>for</code>循环，判断条件为<code>i&lt;6</code>。首次循环至内部，触发<code>setTimeout</code>函数，这对JS引擎来说是一个<strong>异步任务</strong>，并不会在主线程上执行，而是交给相应的定时器触发线程处理时间间隔，计时完毕后，将内部需要执行的函数回调给事件触发线程，并列入<strong>事件队列</strong>等待执行。需要注意的是，异步任务并不会“堵塞”同步任务的执行进程，所以<code>for</code>循环还会继续执行，累加后进入下一次循环。</p>
 <p>当<code>i=1</code>进入下一次循环时，就会发现又遇到这个<code>setTimeout</code>函数了！是的，它将再一次从主线程中“抽离”，经由异步处理进入事件队列等待执行。也就是说，直到<code>i=6</code>跳出这个<code>for</code>循环时，<code>for</code>“空转”了6次。</p>
 <p>现在主线程的同步任务全部执行完毕了，JS引擎便会问询事件触发线程，将事件队列中的回调函数加入主线程执行栈开始执行。事件队列中一共有6个需要执行的回调函数，代入后此时我们的最终值<code>i=6</code>，所以会打印出「6 6 6 6 6 6」。</p>
 </li>

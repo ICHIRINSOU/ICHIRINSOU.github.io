@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-07-12T23:12:07&#43;08:00</updated>
+    <updated>2022-07-13T04:20:21&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">关于JavaScript 作用域&amp;闭包</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/220207/" />
             <id>https://ichirinsou.github.io/tech/220207/</id>
-            <updated>2022-07-11T09:11:33&#43;08:00</updated>
+            <updated>2022-07-13T04:19:48&#43;08:00</updated>
             <published>2022-02-07T22:31:58&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -119,9 +119,104 @@
 &lt;li&gt;
 &lt;h3 id=&#34;究竟什么是闭包&#34;&gt;究竟什么是闭包？&lt;/h3&gt;
 &lt;p&gt;现在看到了这里，那么究竟什么是闭包呢？&lt;/p&gt;
+&lt;p&gt;确实众说纷纭。这里我引用一本书中的阐释：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;当函数可以记住并访问所在的词法作用域时，就产生了闭包，即使函数是在当前词法作用域之外执行。&lt;/strong&gt;&lt;a href=&#34;https://awesome-programming-books.github.io/javascript/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript%EF%BC%88%E4%B8%8A%E5%8D%B7%EF%BC%89.pdf&#34;&gt;[2]&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;闭包好像是JavaScript世界中的一朵巨大疑云，但其实如果了解了JavaScript的作用域工作原理，就会发现闭包是一件普通的、甚至随处可见的“自然结果”，是的，它可能只是JavaScript作用域的副产品。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;看是闭包&#34;&gt;看，是闭包！&lt;/h3&gt;
+&lt;p&gt;如果用纯文字来描述闭包，一定是苍白无力的。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-JavaScript&#34; data-lang=&#34;JavaScript&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;明天吃海鲜炒饭！&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;bar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+        &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们暂时不需要执行函数&lt;code&gt;foo()&lt;/code&gt;，仅仅依赖我们之前学到的函数作用域知识，&lt;code&gt;bar()&lt;/code&gt;引用了一个在“它的身体里”找不到的变量&lt;code&gt;str&lt;/code&gt;，于是按照规则，它会向上一级作用域（也就是&lt;code&gt;foo()&lt;/code&gt;的作用域）查找这个变量&lt;code&gt;str&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;好在它找到了！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-JavaScript&#34; data-lang=&#34;JavaScript&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;明天吃海鲜炒饭！&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;bar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+        &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;bar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//执行函数才能得到结果
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;nx&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//执行函数才能得到结果
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//明天吃海鲜炒饭！
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这是闭包吗？从我个人的角度来说，是的。但是在我阅读的书籍&lt;a href=&#34;https://awesome-programming-books.github.io/javascript/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript%EF%BC%88%E4%B8%8A%E5%8D%B7%EF%BC%89.pdf&#34;&gt;《你不知道的JavaScript·上》&lt;/a&gt;中给出了一个更严谨的说法，&lt;strong&gt;是也不是&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;究其原因是作者认为这种处理方式完全可以使用作用域链来解释，虽然这是闭包非常重要的一部分，但是并不能完全的体现出闭包的全貌供给我们观察。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-JavaScript&#34; data-lang=&#34;JavaScript&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;明天吃海鲜炒饭！&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;bar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+        &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;bar&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//返回bar函数值
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;//它的作用实际上也是执行了bar才会得到结果，否则就是声明函数而已
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;anoFoo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;nx&#34;&gt;anoFoo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//明天吃海鲜炒饭！
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;foo()&lt;/code&gt;执行后，将其返回值（也就是内部的&lt;code&gt;bar&lt;/code&gt;函数）赋值给常量&lt;code&gt;anoFoo&lt;/code&gt;并调用&lt;code&gt;myFoo()&lt;/code&gt;， 实际上只是通过不同的标识符引用调用了内部的函数&lt;code&gt;bar()&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;foo()&lt;/code&gt;被执行后，通常会期待&lt;code&gt;foo()&lt;/code&gt;的整个内部作用域被销毁。但是因为&lt;code&gt;bar()&lt;/code&gt;正在有意无意地被间接使用着，所以整个作用域并不会回收。它覆盖着整个&lt;code&gt;foo()&lt;/code&gt;函数内部作用域的闭包，以便随后在任何时间引用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;bar()&lt;/code&gt;依然持有对&lt;code&gt;foo()&lt;/code&gt;作用域的引用，这个引用就叫做闭包。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;而书中这种制造新的变量/常量来间接引用&lt;code&gt;foo()&lt;/code&gt;内部函数的方法，也只是为了证明闭包这个“幽灵”无论被怎么间接地引用都会产生：无论使用何种方式对函数类型的值进行传递，当函数在别处被调用时都可以观察到闭包。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;闭包可以用来做什么施工中&#34;&gt;闭包可以用来做什么？👷施工中。。。&lt;/h3&gt;
+&lt;p&gt;闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;闭包的注意事项-施工中&#34;&gt;闭包的注意事项⚠️ 👷施工中。。。&lt;/h3&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
@@ -1023,7 +1118,7 @@
             <title type="text">JavaScript函数I</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210902/" />
             <id>https://ichirinsou.github.io/tech/210902/</id>
-            <updated>2022-02-23T02:14:11&#43;08:00</updated>
+            <updated>2022-07-13T04:20:17&#43;08:00</updated>
             <published>2021-09-02T01:08:56&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -1182,7 +1277,7 @@
 &lt;li&gt;
 &lt;h3 id=&#34;闭包&#34;&gt;闭包&lt;/h3&gt;
 &lt;p&gt;简单来说，如果一个函数用到了函数外的变量，那么这个函数+变量就组成了闭包。&lt;/p&gt;
-&lt;p&gt;详细指路👉🏻&lt;a href=&#34;&#34;&gt;关于闭包的文章正在施工中👷...&lt;/a&gt;🥳&lt;/p&gt;
+&lt;p&gt;详细指路👉🏻&lt;a href=&#34;http://www.hiillos.ink/tech/220207/&#34;&gt;《关于JavaScript 作用域&amp;amp;闭包》&lt;/a&gt;🥳&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;形式参数&#34;&gt;形式参数&lt;/h3&gt;

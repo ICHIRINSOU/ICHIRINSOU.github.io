@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-07-14T06:19:01&#43;08:00</updated>
+    <updated>2022-07-15T08:00:26&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -20,17 +20,16 @@
             <title type="text">关于JavaScript 作用域&amp;闭包</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/220207/" />
             <id>https://ichirinsou.github.io/tech/220207/</id>
-            <updated>2022-07-14T06:18:55&#43;08:00</updated>
+            <updated>2022-07-15T07:58:46&#43;08:00</updated>
             <published>2022-02-07T22:31:58&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
                     <uri>https://ichirinsou.github.io/</uri>
                     <email>evie.hiillos@gmail.com</email>
                     </author>
-            <summary type="html">什么是闭包？闭包的用途是什么？闭包的缺点是什么？ 作用域 &amp;amp; 词法作用域 什么是作用域 几乎在……</summary>
+            <summary type="html">作用域 &amp;amp; 词法作用域 什么是作用域 几乎在我们学习每一门语言时都会涉及作用域这个概念。那究……</summary>
             
-                <content type="html">&lt;p&gt;什么是闭包？闭包的用途是什么？闭包的缺点是什么？&lt;/p&gt;
-&lt;h2 id=&#34;作用域--词法作用域&#34;&gt;作用域 &amp;amp; 词法作用域&lt;/h2&gt;
+                <content type="html">&lt;h2 id=&#34;作用域--词法作用域&#34;&gt;作用域 &amp;amp; 词法作用域&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;什么是作用域&#34;&gt;什么是作用域&lt;/h3&gt;
@@ -211,10 +210,10 @@
 &lt;h3 id=&#34;闭包可以用来做什么&#34;&gt;闭包可以用来做什么？&lt;/h3&gt;
 &lt;p&gt;闭包在许多地方都有应用，它的最大用处莫非两个：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;访问/修改函数内部变量&lt;/li&gt;
+&lt;li&gt;访问函数内部变量&lt;/li&gt;
 &lt;li&gt;将变量保存在内存中&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;访问修改函数内部变量&#34;&gt;访问/修改函数内部变量&lt;/h4&gt;
+&lt;h4 id=&#34;访问函数内部变量&#34;&gt;访问函数内部变量&lt;/h4&gt;
 &lt;p&gt;正如我们在前面函数作用域的内容中提到的那样，我们无法从函数外部访问内部，而这种做法是处于安全的考虑，并不想把所有的变量都暴露在外部（往往它们只会暴露出可供使用的API）。&lt;/p&gt;
 &lt;p&gt;考虑下面代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -331,11 +330,43 @@
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
+&lt;/div&gt;&lt;p&gt;我们都知道JavaScript提供自动垃圾回收机制，即每隔一段时间会查看是否有需要回收的变量，判别依据就是该变量是否存在于当前执行上下文中以及是否在其他地方被引用。而JS函数执行完成后，作用域就会被清理，内存也随之回收，而在第二段代码中，我们可以看到&lt;code&gt;n&lt;/code&gt;并没有被回收。&lt;/p&gt;
+&lt;p&gt;这是因为第二段代码中&lt;code&gt;let Add = add()&lt;/code&gt;实际上就是将&lt;code&gt;add()&lt;/code&gt;执行后的返回值函数&lt;code&gt;counter&lt;/code&gt;赋给了全局变量&lt;code&gt;Add&lt;/code&gt;，全局变量只会在程序退出或网页关闭时被回收，而函数&lt;code&gt;counter&lt;/code&gt;又引用了函数&lt;code&gt;add&lt;/code&gt;中的变量&lt;code&gt;n&lt;/code&gt;，所以函数&lt;code&gt;add&lt;/code&gt;的上下文就不会随着调用结束而回收。&lt;/p&gt;
+&lt;p&gt;⚠️但是如果直接执行&lt;code&gt;add()()&lt;/code&gt;仍旧会得到与第一段代码相同的结果：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-JavaScript&#34; data-lang=&#34;JavaScript&#34;&gt;&lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 2
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 2
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这是因为&lt;code&gt;add()()&lt;/code&gt;即执行&lt;code&gt;counter()&lt;/code&gt;，函数执行完成后作用域与内存会被回收，再一次执行&lt;code&gt;add()()&lt;/code&gt;是重新调用函数&lt;code&gt;add&lt;/code&gt;与内部的&lt;code&gt;counter&lt;/code&gt;。这说明声明一个变量&lt;code&gt;let Add = add()&lt;/code&gt;来承载是&lt;strong&gt;必须的&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;闭包的注意事项&#34;&gt;闭包的注意事项⚠️&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。&lt;/li&gt;
+&lt;li&gt;闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即 &lt;strong&gt;不要滥用，不要随意修改&lt;/strong&gt;👍&lt;/p&gt;
+&lt;p&gt;文章参考自🥰&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;#&lt;a href=&#34;https://awesome-programming-books.github.io/javascript/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript%EF%BC%88%E4%B8%8A%E5%8D%B7%EF%BC%89.pdf&#34;&gt;&lt;strong&gt;《你不知道的JavaScript·上卷》&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;#&lt;a href=&#34;https://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html&#34;&gt;学习Javascript闭包（Closure）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;#&lt;a href=&#34;https://segmentfault.com/a/1190000018228534&#34;&gt;什么是闭包？闭包的优缺点？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;#&lt;a href=&#34;https://segmentfault.com/a/1190000023356598&#34;&gt;深入理解JavaScript闭包之什么是闭包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;#&lt;a href=&#34;https://segmentfault.com/a/1190000040713788&#34;&gt;JS中关于闭包的一切&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;#&lt;a href=&#34;https://juejin.cn/post/6844904165672484871#heading-10&#34;&gt;面试官：说说作用域和闭包吧&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
             
             

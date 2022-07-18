@@ -54,13 +54,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-09-12T22:37:56+08:00",
-        "dateModified": "2022-07-17T12:59:07+08:00",
+        "dateModified": "2022-07-19T04:43:21+08:00",
         "url": "https://ichirinsou.github.io/tech/210912/",
         "headline": "关于JavaScript this",
         "description": "关于this this究竟是什么？ this是JavaScript中的一个关键字。是众说……",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  2250 ,
+        "wordCount":  2615 ,
         "author": {
             "@type": "Person",
             "description": "Hurricane, hurricane 🥀",
@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="僕と花" />
 <meta property="og:locale" content="zh" /><meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-09-12T22:37:56&#43;08:00" />
-    <meta property="article:modified_time" content="2022-07-17T12:59:07&#43;08:00" />
+    <meta property="article:modified_time" content="2022-07-19T04:43:21&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -404,7 +404,7 @@
 <ul>
 <li>bind方法接收的第一个参数为this的指向，当第一个参数为<code>null</code>或<code>undefined</code>时，this会进行默认绑定，指向全局对象，与call、apply方法一致。</li>
 <li>bind方法接受的第二个参数开始，可以接收任意个参数。每个参数会映射到相应位置的 function 的参数上。但是如果将所有的参数作为数组传入，它们会作为一个整体映射到 function 对应的第一个参数上，之后参数都为空。同样与call方法一致。</li>
-<li>⚠️但是，bind方法并不会像call、apply方法那样立即执行！你可以认为<strong>bind方法实际上返回了一个函数，只有调用，才能执行</strong>，而call、apply方法会立即调用从而产生执行结果。
+<li>⚠️但是，bind方法并不会像call、apply方法那样立即执行！你可以认为<strong>bind方法实际上返回了一个函数，只有调用，才能执行</strong>，而call、apply方法会立即调用产生执行结果。
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -481,18 +481,54 @@
 <li>三种方法都可以改变函数的this指向，进行显式绑定。</li>
 <li>三种方法第一个参数都是this的指向对象，如果参数为undefined或null，则默认指向全局对象window。</li>
 <li>三种方法都可以传递参数，但apply只接收数组/伪数组，call、bind接收参数列。</li>
-<li>apply、call方法立即执行，bind方法则会返回this绑定后的函数，需要手动调用。</li>
+<li>apply、call方法立即执行，bind方法则会返回this绑定后的函数，需要调用执行。</li>
 </ol>
 </li>
 </ol>
 </li>
 <li>
 <h3 id="new绑定"><a href="#new绑定" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:new绑定" class="headings">new绑定</a></h3>
-</li>
+<p>当通过构造函数生成新对象时，这个新对象会绑定到函数调用的this。</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">Foo</span><span class="p">(</span> <span class="nx">a</span> <span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="nx">a</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">bar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Foo</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">bar</span><span class="p">.</span><span class="nx">a</span> <span class="p">)</span> <span class="c1">// 2
+</span></code></pre></td></tr></table></div>
+</div>
+</div></li>
 <li>
 <h3 id="优先级判断"><a href="#优先级判断" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:优先级判断" class="headings">优先级判断</a></h3>
+<p>判断函数的this绑定需要找到这个函数的直接调用位置。一般来说this指向遵循这四条规则：</p>
+<ol>
+<li>是否由<code>new</code>调用？☑️ <strong>this绑定到新创建对象</strong></li>
+<li>是否由<code>call</code>、<code>apply</code>、<code>bind</code>调用？☑️ <strong>this绑定到指定的对象</strong></li>
+<li>是否作为某个对象的方法进行调用？☑️ <strong>this绑定到上下文对象</strong></li>
+<li>否则会启用默认绑定，即<strong>this绑定至全局对象window</strong></li>
+</ol>
+<blockquote>
+<p>⚠️ES6中的箭头函数并不会使用这四条标准的绑定规则，而是根据当前的词法作用域来决定this。具体来说，箭头函数会继承外层函数调用的this绑定（无论this绑定到什么）。</p>
+</blockquote>
+<p>文章参考自🥰</p>
 </li>
 </ol>
+<ul>
+<li>#<a href="https://awesome-programming-books.github.io/javascript/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript%EF%BC%88%E4%B8%8A%E5%8D%B7%EF%BC%89.pdf" target="_blank" rel="noopener"><strong>《你不知道的JavaScript·上卷》</strong></a></li>
+<li>#<a href="https://www.ruanyifeng.com/blog/2018/06/javascript-this.html" target="_blank" rel="noopener">JavaScript 的 this 原理</a></li>
+<li>#<a href="https://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html" target="_blank" rel="noopener">JavaScript 的 this 用法</a></li>
+<li>#<a href="https://segmentfault.com/a/1190000018017796" target="_blank" rel="noopener">「干货」细说 call、apply 以及 bind 的区别和用法</a></li>
+</ul>
 
             </div>
 

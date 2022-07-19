@@ -12,7 +12,7 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>僕と花</title>
+    <title>HTTP状态码小结 | 僕と花</title>
 
     <link rel="stylesheet" href="/css/meme.min.694160bc541ffcb01e6ec33f0d2659bac5d7a4cf64b378fe7c0dabfb28f9811f.css"/>
 
@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="Hiillos" /><meta name="description" content="从明天早晨开始，试着去改变世界吧。" />
+    <meta name="author" content="Hiillos" /><meta name="description" content="HTTP状态码 HTTP状态码（英语：HTTP Status Code）是用以表示网页服务器超文本传……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -37,28 +37,30 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="僕と花" />
-    <meta name="msapplication-starturl" content="" />
+    <meta name="msapplication-starturl" content="../../" />
     <meta name="msapplication-TileColor" content="#fff" />
-    <meta name="msapplication-TileImage" content="icons/mstile-150x150.png" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
     <link rel="manifest" href="/manifest.json" />
 
     
-    <link rel="alternate" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" title="僕と花" />
-    <link rel="alternate" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" title="僕と花" />
     
 
     
-    <link rel="canonical" href="https://ichirinsou.github.io/" />
+    <link rel="canonical" href="https://ichirinsou.github.io/tech/210627/" />
     
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "datePublished": "2021-06-21T13:07:50+00:00",
+        "@type": "BlogPosting",
+        "datePublished": "2021-06-27T22:39:42+08:00",
         "dateModified": "2022-07-20T06:55:49+08:00",
-        "url": "https://ichirinsou.github.io/",
-        "description": "从明天早晨开始，试着去改变世界吧。",
+        "url": "https://ichirinsou.github.io/tech/210627/",
+        "headline": "HTTP状态码小结",
+        "description": "HTTP状态码 HTTP状态码（英语：HTTP Status Code）是用以表示网页服务器超文本传……",
+        "inLanguage" : "zh-CN",
+        "articleSection": "tech",
+        "wordCount":  625 ,
         "author": {
             "@type": "Person",
             "description": "Hurricane, hurricane 🥀",
@@ -67,7 +69,15 @@
             "url": "https://ichirinsou.github.io/",
             "name": "Hiillos"
         },
-        "name": "僕と花"
+        "publisher": {
+            "@type": "Organization",
+            "name": "僕と花",
+            "url": "https://ichirinsou.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://ichirinsou.github.io/"
+        }
     }
 </script>
 
@@ -80,11 +90,16 @@
 
 
 
-<meta property="og:title" content="僕と花" />
-<meta property="og:description" content="从明天早晨开始，试着去改变世界吧。" />
-<meta property="og:url" content="https://ichirinsou.github.io/" />
+<meta property="og:title" content="HTTP状态码小结" />
+<meta property="og:description" content="HTTP状态码 HTTP状态码（英语：HTTP Status Code）是用以表示网页服务器超文本传……" />
+<meta property="og:url" content="https://ichirinsou.github.io/tech/210627/" />
 <meta property="og:site_name" content="僕と花" />
-<meta property="og:locale" content="zh" /><meta property="og:type" content="website" />
+<meta property="og:locale" content="zh" /><meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2021-06-27T22:39:42&#43;08:00" />
+    <meta property="article:modified_time" content="2022-07-20T06:55:49&#43;08:00" />
+    
+    <meta property="article:section" content="tech" />
+
 
 
     
@@ -166,34 +181,200 @@
 
             
             
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post h-entry" data-align="justify" data-type="tech" data-toc-num="true">
+
+            <h1 class="post-title p-name">HTTP状态码小结</h1>
+
+            
+
+            
+                
+            
+
+            
+
+            <nav class="contents">
+  <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
+    <li><a id="contents:http状态码" href="#http状态码">HTTP状态码</a></li>
+    <li><a id="contents:常见举例" href="#常见举例">常见举例！</a>
+      <ol>
+        <li><a id="contents:1" href="#1">1##</a></li>
+        <li><a id="contents:2" href="#2">2##</a></li>
+        <li><a id="contents:3" href="#3">3##</a></li>
+        <li><a id="contents:4" href="#4">4##</a></li>
+        <li><a id="contents:5" href="#5">5##</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav><div class="post-body e-content">
+                <h2 id="http状态码"><a href="#http状态码" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:http状态码" class="headings">HTTP状态码</a></h2>
+<blockquote>
+<p>HTTP状态码（英语：HTTP Status Code）是用以表示网页服务器超文本传输协议响应状态的3位数字代码。所有状态码被分为五类，状态码的第一个数字代表了响应的五种状态之一。<a href="https://zh.m.wikipedia.org/zh-hans/HTTP%E7%8A%B6%E6%80%81%E7%A0%81" target="_blank" rel="noopener">[1]</a></p>
+</blockquote>
+<h2 id="常见举例"><a href="#常见举例" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:常见举例" class="headings">常见举例！</a></h2>
+<ul>
+<li>
+<h3 id="1"><a href="#1" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:1" class="headings">1##</a></h3>
+<p>这一类型的状态码，代表请求已<strong>被接受</strong>，需要继续处理。</p>
+<ol>
+<li>
+<p><strong>100</strong> Continue 继续</p>
+<p>服务器已经接收到请求，客户端应继续其请求。</p>
+</li>
+<li>
+<p><strong>101</strong> Switching Protocols 切换协议</p>
+<p>服务器根据客户端的请求切换协议。但只能切换到更高级的协议。</p>
+</li>
+</ol>
+</li>
+<li>
+<h3 id="2"><a href="#2" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:2" class="headings">2##</a></h3>
+<p>这一类型的状态码，代表请求已<strong>成功</strong>被服务器接收、理解、并接受。</p>
+<ol>
+<li>
+<p><strong>200</strong> OK 请求成功</p>
+<p>已成功处理了请求。出现此状态码是表示正常状态，一般用于GET与POST请求。</p>
+</li>
+<li>
+<p><strong>201</strong> Created 已创建</p>
+<p>成功请求，并且服务器创建了新的资源。</p>
+</li>
+<li>
+<p><strong>202</strong> Accepted 已接受</p>
+<p>服务器已经接受请求，但未处理完成。</p>
+</li>
+<li>
+<p><strong>204</strong> No Content 无内容</p>
+<p>服务器成功处理，但未返回内容。</p>
+</li>
+<li>
+<p><strong>205</strong> Reset Content 重置内容</p>
+<p>服务器处理成功，用户终端（例如：浏览器）应重置文档视图。</p>
+</li>
+<li>
+<p><strong>206</strong> Partial Content 部分内容</p>
+<p>服务器成功处理了部分GET请求。</p>
+</li>
+</ol>
+</li>
+<li>
+<h3 id="3"><a href="#3" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:3" class="headings">3##</a></h3>
+<p>这类状态码代表需要客户端采取进一步的操作才能完成请求。通常，这些状态码用来<strong>重定向</strong>，后续的请求地址（重定向目标）在本次响应的Location域中指明。</p>
+<ol>
+<li>
+<p><strong>300</strong> Multiple Choices	多种选择</p>
+</li>
+<li>
+<p><strong>301</strong> Moved Permanently 永久移动</p>
+</li>
+<li>
+<p><strong>302</strong> Found 临时移动</p>
+</li>
+<li>
+<p><strong>303</strong> See Other 查看其它地址</p>
+</li>
+<li>
+<p><strong>304</strong> Not Modified 未修改</p>
+</li>
+<li>
+<p><strong>305</strong> Use Proxy 使用代理</p>
+</li>
+<li>
+<p><strong>307</strong> Temporary Redirect 临时重定向</p>
+</li>
+</ol>
+</li>
+<li>
+<h3 id="4"><a href="#4" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:4" class="headings">4##</a></h3>
+<p>这类的状态码代表了<strong>客户端</strong>看起来可能发生了错误，妨碍了服务器的处理。</p>
+<ol>
+<li><strong>401</strong></li>
+<li></li>
+</ol>
+</li>
+<li>
+<h3 id="5"><a href="#5" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:5" class="headings">5##</a></h3>
+<p>表示<strong>服务器</strong>无法完成明显有效的请求。这类状态码代表了服务器在处理请求的过程中有错误或者异常状态发生，也有可能是服务器意识到以当前的软硬件资源无法完成对请求的处理。</p>
+</li>
+</ul>
+
+            </div>
+
+            
+
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+    <footer class="minimal-footer">
+        
+            <div class="post-tag"><a href="/tags/html/" rel="tag" class="post-tag-link">#html</a></div>
+        
+        
+            <div class="post-category">
+                <a href="/tech/" class="post-category-link active">tech</a> | <a href="/life/" class="post-category-link">life</a>
+            </div>
+        
+        
+    </footer>
+
+
+
+        
+
+
+        
+    
+        
+        
     
     
-        <main class="home">
-    <div class="poetry">
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/tech/210711/" rel="prev">&lt; CSS基础知识合辑</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/tech/210625/" rel="next">HTML重点标签 &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
         
-            <p>「僕と君なら，</p>
-        
-            <p>きっと越えて行けるさ」</p>
-        
-            <p>「如果是我和你的话，</p>
-        
-            <p>一定能度过难关吧」</p>
-        
-            <p>from</p>
-        
-            <p><a href="https://radwimps.jp/" target="_blank" rel="noopener">RADWIMPS</a></p>
-        
+
+
     </div>
-    
 </main>
 
-    
-    
-    
-    
-    
-    
-    
 
             
     <div id="back-to-top" class="back-to-top">

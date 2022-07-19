@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Wed, 20 Jul 2022 06:55:55 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 20 Jul 2022 06:57:48 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -1878,7 +1878,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这是JavsScript较为难理解的一个概念，在后续更新中，为了防止this带来更多的“困扰”，箭头函数&lt;code&gt;=&amp;gt;&lt;/code&gt;是没有this的。&lt;/p&gt;
-&lt;p&gt;详细指路👉🏻&lt;a href=&#34;&#34;&gt;关于this&amp;amp;arguments的文章正在施工中👷...&lt;/a&gt;🥳&lt;/p&gt;
+&lt;p&gt;详细指路👉🏻&lt;a href=&#34;http://localhost:1313/tech/210912/&#34;&gt;《关于JavaScript this》&lt;/a&gt;🥳&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </description>

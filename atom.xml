@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-07-20T06:55:55&#43;08:00</updated>
+    <updated>2022-07-20T06:57:48&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -1617,7 +1617,7 @@
             <title type="text">JavaScript函数I</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/210902/" />
             <id>https://ichirinsou.github.io/tech/210902/</id>
-            <updated>2022-07-13T04:20:17&#43;08:00</updated>
+            <updated>2022-07-20T06:57:40&#43;08:00</updated>
             <published>2021-09-02T01:08:56&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -1886,7 +1886,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这是JavsScript较为难理解的一个概念，在后续更新中，为了防止this带来更多的“困扰”，箭头函数&lt;code&gt;=&amp;gt;&lt;/code&gt;是没有this的。&lt;/p&gt;
-&lt;p&gt;详细指路👉🏻&lt;a href=&#34;&#34;&gt;关于this&amp;amp;arguments的文章正在施工中👷...&lt;/a&gt;🥳&lt;/p&gt;
+&lt;p&gt;详细指路👉🏻&lt;a href=&#34;http://localhost:1313/tech/210912/&#34;&gt;《关于JavaScript this》&lt;/a&gt;🥳&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>

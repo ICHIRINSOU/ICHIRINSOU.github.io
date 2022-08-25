@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Wed, 24 Aug 2022 07:39:09 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 25 Aug 2022 23:55:32 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -592,6 +592,52 @@
                                 
                                 
                                     <category domain="https://ichirinsou.github.io/tags/javascript/">JavaScript</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>跨域（Cross-Origin）初窥</title>
+                <link>https://ichirinsou.github.io/tech/211207/</link>
+                <guid isPermaLink="true">https://ichirinsou.github.io/tech/211207/</guid>
+                <pubDate>Tue, 07 Dec 2021 20:55:16 &#43;0800</pubDate>
+                
+                    <author>evie.hiillos@gmail.com (Hiillos)</author>
+                
+                
+                
+                    <description>&lt;h2 id=&#34;同源策略&#34;&gt;同源策略&lt;/h2&gt;
+&lt;h2 id=&#34;跨域&#34;&gt;跨域&lt;/h2&gt;
+&lt;h2 id=&#34;jsonp跨域&#34;&gt;JSONP跨域&lt;/h2&gt;
+&lt;h2 id=&#34;cors跨域&#34;&gt;CORS跨域&lt;/h2&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://ichirinsou.github.io/tech/">tech</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://ichirinsou.github.io/tags/cross-origin/">Cross-Origin</category>
                                 
                             
                         

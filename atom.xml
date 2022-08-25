@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-08-24T07:39:09&#43;08:00</updated>
+    <updated>2022-08-25T23:55:32&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -596,10 +596,59 @@
         </entry>
     
         <entry>
+            <title type="text">跨域（Cross-Origin）初窥</title>
+            <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/211207/" />
+            <id>https://ichirinsou.github.io/tech/211207/</id>
+            <updated>2022-08-24T07:56:10&#43;08:00</updated>
+            <published>2021-12-07T20:55:16&#43;08:00</published>
+            <author>
+                    <name>Hiillos</name>
+                    <uri>https://ichirinsou.github.io/</uri>
+                    <email>evie.hiillos@gmail.com</email>
+                    </author>
+            <summary type="html">同源策略 跨域 JSONP跨域 CORS跨域</summary>
+            
+                <content type="html">&lt;h2 id=&#34;同源策略&#34;&gt;同源策略&lt;/h2&gt;
+&lt;h2 id=&#34;跨域&#34;&gt;跨域&lt;/h2&gt;
+&lt;h2 id=&#34;jsonp跨域&#34;&gt;JSONP跨域&lt;/h2&gt;
+&lt;h2 id=&#34;cors跨域&#34;&gt;CORS跨域&lt;/h2&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://ichirinsou.github.io/tech/" term="tech" label="tech" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://ichirinsou.github.io/tags/cross-origin/" term="Cross-Origin" label="Cross-Origin" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">Promise初窥</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/211204/" />
             <id>https://ichirinsou.github.io/tech/211204/</id>
-            <updated>2022-08-24T07:37:34&#43;08:00</updated>
+            <updated>2022-08-24T07:39:46&#43;08:00</updated>
             <published>2021-12-04T21:58:02&#43;08:00</published>
             <author>
                     <name>Hiillos</name>

@@ -54,13 +54,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-12-07T20:55:16+08:00",
-        "dateModified": "2022-08-26T22:53:00+08:00",
+        "dateModified": "2022-08-27T04:20:03+08:00",
         "url": "https://ichirinsou.github.io/tech/211207/",
         "headline": "跨域（Cross-Origin）初窥",
         "description": "同源策略 什么是同源？ 使用window.origin或者location.origin……",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  127 ,
+        "wordCount":  1220 ,
         "author": {
             "@type": "Person",
             "description": "Hurricane, hurricane 🥀",
@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="僕と花" />
 <meta property="og:locale" content="zh" /><meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-12-07T20:55:16&#43;08:00" />
-    <meta property="article:modified_time" content="2022-08-26T22:53:00&#43;08:00" />
+    <meta property="article:modified_time" content="2022-08-27T04:20:03&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -204,12 +204,14 @@
       <ol>
         <li><a id="contents:什么是同源" href="#什么是同源">什么是同源？</a></li>
         <li><a id="contents:同源策略-1" href="#同源策略-1">同源策略</a></li>
-        <li><a id="contents:为什么会有同源策略" href="#为什么会有同源策略">为什么会有同源策略？</a></li>
       </ol>
     </li>
-    <li><a id="contents:跨域" href="#跨域">跨域</a></li>
-    <li><a id="contents:jsonp跨域" href="#jsonp跨域">JSONP跨域</a></li>
-    <li><a id="contents:cors跨域" href="#cors跨域">CORS跨域</a></li>
+    <li><a id="contents:跨域" href="#跨域">跨域</a>
+      <ol>
+        <li><a id="contents:cors跨域" href="#cors跨域">CORS跨域</a></li>
+        <li><a id="contents:jsonp跨域" href="#jsonp跨域">JSONP跨域</a></li>
+      </ol>
+    </li>
   </ol>
 </nav><div class="post-body e-content">
                 <h2 id="同源策略"><a href="#同源策略" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:同源策略" class="headings">同源策略</a></h2>
@@ -225,16 +227,104 @@
 <li>
 <h3 id="同源策略-1"><a href="#同源策略-1" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:同源策略-1" class="headings">同源策略</a></h3>
 <ul>
-<li>浏览器规定</li>
+<li>浏览器规定如果JS运行在源A中，那么只能获取源A得数据，不能获取源B的数据，即<strong>不允许跨域</strong></li>
+<li>这是浏览器故意设计的功能，目的是为了<strong>保护用户隐私</strong>。</li>
 </ul>
-</li>
-<li>
-<h3 id="为什么会有同源策略"><a href="#为什么会有同源策略" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:为什么会有同源策略" class="headings">为什么会有同源策略？</a></h3>
 </li>
 </ol>
 <h2 id="跨域"><a href="#跨域" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:跨域" class="headings">跨域</a></h2>
-<h2 id="jsonp跨域"><a href="#jsonp跨域" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:jsonp跨域" class="headings">JSONP跨域</a></h2>
-<h2 id="cors跨域"><a href="#cors跨域" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:cors跨域" class="headings">CORS跨域</a></h2>
+<p>但是大多数时间，我们往往都需要进行跨域访问。</p>
+<ol>
+<li>
+<h3 id="cors跨域"><a href="#cors跨域" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:cors跨域" class="headings">CORS跨域</a></h3>
+<p>跨源资源共享（CORS）是一种基于 HTTP 头的机制，该机制通过允许服务器标示除了它自己以外的其它源，使得浏览器允许这些源访问加载自己的资源。<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS" target="_blank" rel="noopener">[1]</a></p>
+<p>整个CORS通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS通信与同源的AJAX通信没有差别，代码完全一样。浏览器一旦发现AJAX请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。 因此，实现CORS通信的关键是服务器。只要服务器实现了CORS接口，就可以跨源通信。<a href="https://juejin.cn/post/6942508578636824589#heading-6" target="_blank" rel="noopener">[2]</a></p>
+<p>我们在手动设置CORS时只需在服务器端添加：<code>response.setHeader('Access-Control-Allow-Origin','*')</code>。一般来说我们在设置源字段的时候都会填写<strong>一个域名</strong>，* 则代表可以接受所有域名的加载资源请求。</p>
+</li>
+<li>
+<h3 id="jsonp跨域"><a href="#jsonp跨域" class="anchor-link"><svg t="1624266334453" class="icon anchor-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22848" width="200" height="200"><path d="M859.867 448.403c136.9-63.175 54.44-193.784-98.066-152.726-84.072 22.603-158.738 111.715-218.313 145.103 33.388-59.575 122.469-134.255 145.104-218.281C729.65 69.96 599.041-12.468 535.881 124.402c-63.175-136.87-193.784-54.441-152.742 98.097 22.65 84.025 111.731 158.706 145.103 218.281-59.56-33.388-134.208-122.5-218.296-145.103-152.507-41.058-234.951 89.551-98.05 152.726-136.901 63.16-54.457 193.768 98.05 152.726 84.088-22.618 158.737-111.731 218.296-145.103-33.372 59.576-122.453 134.24-145.103 218.328-41.042 152.508 89.566 234.937 152.742 98.051 63.16 136.886 193.769 54.457 152.711-98.051-22.635-84.088-111.716-158.752-145.104-218.328 59.575 33.372 134.24 122.485 218.313 145.103 152.507 41.042 234.967-89.566 98.066-152.726z" fill="#BFCD37" p-id="22849"></path></svg></a><a href="#contents:jsonp跨域" class="headings">JSONP跨域</a></h3>
+<p>当我们无法使用CORS进行跨域时，可以考虑使用JSONP来进行跨域。</p>
+<p>JSONP的原理纯属套娃，其本质就是使用回调函数来进行一个的套。</p>
+<p>因为在HTML中，script的src属性本身是一个不会产生跨域的GET请求，我们可以通过定义一个全局回调函数，同时引用服务器端的js文件（文件中含有经过服务器端处理过的包含我们所需数据的同名函数），js在执行后，就是变相执行了我们一早就定义好的全局回调函数（因为他们是同名的），从而解决了我们的需求。这么说来可能有些拗口，可以参考以下过程：</p>
+<p>本地：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//定义全局回调函数
+</span><span class="c1"></span><span class="nb">window</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>服务器端：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//将我们需要的数据装进一个js内，由其他人调用
+</span><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="nx">path</span> <span class="o">===</span> <span class="s1">&#39;/data.js&#39;</span><span class="p">){</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span> <span class="o">=</span> <span class="mi">200</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span><span class="s1">&#39;text/javascript;charset=utf-8&#39;</span><span class="p">)</span>
+    <span class="c1">//写所引用js内容，并字符串化
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;./public/data.js&#39;</span><span class="p">).</span><span class="nx">toString</span><span class="p">()</span>
+    <span class="c1">//写所需数据内容，并字符串化
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;./public/data.json&#39;</span><span class="p">).</span><span class="nx">toString</span><span class="p">()</span>
+    <span class="c1">//将所需数据替换占位符
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">dataSource</span> <span class="o">=</span> <span class="nx">string</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;{{data}}&#39;</span><span class="p">,</span><span class="nx">data</span><span class="p">)</span>
+    <span class="c1">//将数据写入data.js作为res
+</span><span class="c1"></span>    <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">dataSource</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//data.js中
+</span><span class="c1">//dataSource为同名函数
+</span><span class="c1"></span><span class="nb">window</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">({{</span><span class="nx">data</span><span class="p">}})</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>本地：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//动态引入data.js
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">)</span>
+<span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;.../data.js&#39;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">)</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>我们在本地引用<code>data.js</code>后，服务器端首先发现我们的请求，并将我们所需的内容写入<code>data.js</code>作为回应发送给我们。我们引用的是什么？如果弄清了上述流程，应该发现我们引用的是一句非常简单的<code>window.dataSource(data)</code>。而<code>window.dataSource</code>正是我们一开始定义在本地的一个函数！我们从移花接木地从服务器端拿来了我们需要的数据并执行，也就可以如愿以偿的<code>console.log</code>出我们需要的东西。</p>
+<p>可以说是顶级套娃🪆。</p>
+</li>
+</ol>
 
             </div>
 

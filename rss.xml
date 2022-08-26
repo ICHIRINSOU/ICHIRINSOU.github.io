@@ -21,7 +21,7 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Thu, 25 Aug 2022 23:55:32 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 26 Aug 2022 22:53:08 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
@@ -610,6 +610,25 @@
                 
                 
                     <description>&lt;h2 id=&#34;同源策略&#34;&gt;同源策略&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;什么是同源&#34;&gt;什么是同源？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;window.origin&lt;/code&gt;或者&lt;code&gt;location.origin&lt;/code&gt;可以获得当前&lt;strong&gt;源&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;源：协议+域名+端口号&lt;/li&gt;
+&lt;li&gt;如果协议、域名、端口号完全一致，那么就可以说这两个&lt;code&gt;url&lt;/code&gt;是同源的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;同源策略-1&#34;&gt;同源策略&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览器规定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;为什么会有同源策略&#34;&gt;为什么会有同源策略？&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;跨域&#34;&gt;跨域&lt;/h2&gt;
 &lt;h2 id=&#34;jsonp跨域&#34;&gt;JSONP跨域&lt;/h2&gt;
 &lt;h2 id=&#34;cors跨域&#34;&gt;CORS跨域&lt;/h2&gt;

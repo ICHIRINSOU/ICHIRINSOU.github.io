@@ -54,13 +54,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2022-02-07T22:31:58+08:00",
-        "dateModified": "2022-07-19T04:42:49+08:00",
+        "dateModified": "2022-08-27T08:17:26+08:00",
         "url": "https://ichirinsou.github.io/tech/220207/",
         "headline": "关于JavaScript 作用域\u0026闭包",
         "description": "作用域 \u0026 词法作用域 什么是作用域 几乎在我们学习每一门语言时都会涉及作用域这个概念。那究……",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  4089 ,
+        "wordCount":  4090 ,
         "author": {
             "@type": "Person",
             "description": "Hurricane, hurricane 🥀",
@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="僕と花" />
 <meta property="og:locale" content="zh" /><meta property="og:type" content="article" />
     <meta property="article:published_time" content="2022-02-07T22:31:58&#43;08:00" />
-    <meta property="article:modified_time" content="2022-07-19T04:42:49&#43;08:00" />
+    <meta property="article:modified_time" content="2022-08-27T08:17:26&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -408,7 +408,7 @@
 <span class="nx">anoFoo</span><span class="p">()</span><span class="c1">//相当于执行了bar()，得到结果 明天吃海鲜炒饭！
 </span></code></pre></td></tr></table></div>
 </div>
-</div><p><code>foo()</code>执行后，将其返回值（也就是内部的<code>bar</code>函数）赋值给常量<code>anoFoo</code>并调用<code>myFoo()</code>， 实际上只是通过不同的标识符引用调用了内部的函数<code>bar()</code>。</p>
+</div><p><code>foo()</code>执行后，将其返回值（也就是内部的<code>bar</code>函数）赋值给常量<code>anoFoo</code>并调用<code>anoFoo()</code>， 实际上只是通过不同的标识符引用调用了内部的函数<code>bar()</code>。</p>
 <p>在<code>foo()</code>被执行后，通常会期待<code>foo()</code>的整个内部作用域被销毁。但是因为<code>bar()</code>正在有意无意地被间接使用着，所以整个作用域并不会回收。它覆盖着整个<code>foo()</code>函数内部作用域的闭包，以便随后在任何时间引用。</p>
 <p><strong><code>bar()</code>依然持有对<code>foo()</code>作用域的引用，这个引用就叫做闭包。</strong></p>
 <p>而书中这种制造新的变量/常量来间接引用<code>foo()</code>内部函数的方法，也只是为了证明闭包这个“幽灵”无论被怎么间接地引用都会产生：无论使用何种方式对函数类型的值进行传递，当函数在别处被调用时都可以观察到闭包。</p>

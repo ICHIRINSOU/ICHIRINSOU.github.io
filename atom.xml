@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-08-27T04:21:17&#43;08:00</updated>
+    <updated>2022-08-27T08:17:33&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -216,7 +216,7 @@
             <title type="text">关于JavaScript 作用域&amp;闭包</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/220207/" />
             <id>https://ichirinsou.github.io/tech/220207/</id>
-            <updated>2022-07-19T04:42:49&#43;08:00</updated>
+            <updated>2022-08-27T08:17:26&#43;08:00</updated>
             <published>2022-02-07T22:31:58&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -397,7 +397,7 @@
 &lt;span class=&#34;nx&#34;&gt;anoFoo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//相当于执行了bar()，得到结果 明天吃海鲜炒饭！
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;foo()&lt;/code&gt;执行后，将其返回值（也就是内部的&lt;code&gt;bar&lt;/code&gt;函数）赋值给常量&lt;code&gt;anoFoo&lt;/code&gt;并调用&lt;code&gt;myFoo()&lt;/code&gt;， 实际上只是通过不同的标识符引用调用了内部的函数&lt;code&gt;bar()&lt;/code&gt;。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;foo()&lt;/code&gt;执行后，将其返回值（也就是内部的&lt;code&gt;bar&lt;/code&gt;函数）赋值给常量&lt;code&gt;anoFoo&lt;/code&gt;并调用&lt;code&gt;anoFoo()&lt;/code&gt;， 实际上只是通过不同的标识符引用调用了内部的函数&lt;code&gt;bar()&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;foo()&lt;/code&gt;被执行后，通常会期待&lt;code&gt;foo()&lt;/code&gt;的整个内部作用域被销毁。但是因为&lt;code&gt;bar()&lt;/code&gt;正在有意无意地被间接使用着，所以整个作用域并不会回收。它覆盖着整个&lt;code&gt;foo()&lt;/code&gt;函数内部作用域的闭包，以便随后在任何时间引用。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code&gt;bar()&lt;/code&gt;依然持有对&lt;code&gt;foo()&lt;/code&gt;作用域的引用，这个引用就叫做闭包。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;而书中这种制造新的变量/常量来间接引用&lt;code&gt;foo()&lt;/code&gt;内部函数的方法，也只是为了证明闭包这个“幽灵”无论被怎么间接地引用都会产生：无论使用何种方式对函数类型的值进行传递，当函数在别处被调用时都可以观察到闭包。&lt;/p&gt;

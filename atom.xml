@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-09-03T04:53:56&#43;08:00</updated>
+    <updated>2022-09-03T04:55:53&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -17,10 +17,10 @@
     
     <generator uri="https://gohugo.io/" version="0.83.1">Hugo</generator>
         <entry>
-            <title type="text">从浅谈MVC开始，我眼中的模块化</title>
+            <title type="text">从MVC开始，浅谈我眼中的模块化</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/220630/" />
             <id>https://ichirinsou.github.io/tech/220630/</id>
-            <updated>2022-09-03T04:53:51&#43;08:00</updated>
+            <updated>2022-09-03T04:55:48&#43;08:00</updated>
             <published>2022-06-30T12:43:26&#43;08:00</published>
             <author>
                     <name>Hiillos</name>

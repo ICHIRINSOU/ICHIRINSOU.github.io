@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2022-09-03T04:50:56&#43;08:00</updated>
+    <updated>2022-09-03T04:53:56&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">从浅谈MVC开始，我眼中的模块化</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/220630/" />
             <id>https://ichirinsou.github.io/tech/220630/</id>
-            <updated>2022-09-03T04:49:51&#43;08:00</updated>
+            <updated>2022-09-03T04:53:51&#43;08:00</updated>
             <published>2022-06-30T12:43:26&#43;08:00</published>
             <author>
                     <name>Hiillos</name>
@@ -150,7 +150,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;表驱动编程&#34;&gt;表驱动编程&lt;/h3&gt;
-&lt;p&gt;表驱动编程，我流顾名思义，以表格（哈希表）作为基本驱动来进行编程。基于非常浅显的理解，业务逻辑在笔者眼里就是if - else、switch-case循环，复杂的逻辑就是无尽的if - else、switch-case循环。&lt;/p&gt;
+&lt;p&gt;表驱动编程，我流顾名思义，以表格（哈希表）作为基本驱动来进行编程。基于非常浅显的理解，业务逻辑在笔者眼里就是&lt;code&gt;if - else&lt;/code&gt;、&lt;code&gt;switch - case&lt;/code&gt;循环，复杂的逻辑就是无尽的&lt;code&gt;if - else&lt;/code&gt;、&lt;code&gt;switch - case&lt;/code&gt;循环。&lt;/p&gt;
 &lt;p&gt;这样写出来的代码不仅可读性不强，而且弯弯绕绕难以维护，实乃💩山预备选手。如果这时我们基于表驱动编程，将庞大的if值存入一个哈希（Hash）表，然后直观得从表内取值，岂不美哉？&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

@@ -54,13 +54,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2022-06-12T22:40:29+08:00",
-        "dateModified": "2022-08-16T04:54:40+08:00",
+        "dateModified": "2022-08-28T04:36:49+08:00",
         "url": "https://ichirinsou.github.io/tech/220405/",
         "headline": "用JavaScript实现数组的排序与去重",
         "description": "数组去重 假设有数组array = [1,5,2,3,4,2,3,1,3,4]，你要写一个……",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  568 ,
+        "wordCount":  638 ,
         "author": {
             "@type": "Person",
             "description": "Hurricane, hurricane 🥀",
@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="僕と花" />
 <meta property="og:locale" content="zh" /><meta property="og:type" content="article" />
     <meta property="article:published_time" content="2022-06-12T22:40:29&#43;08:00" />
-    <meta property="article:modified_time" content="2022-08-16T04:54:40&#43;08:00" />
+    <meta property="article:modified_time" content="2022-08-28T04:36:49&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -336,32 +336,40 @@
 </span><span class="lnt">23
 </span><span class="lnt">24
 </span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Javascript" data-lang="Javascript"><span class="kd">let</span> <span class="nx">minIndex</span> <span class="o">=</span> <span class="p">(</span><span class="nx">numbers</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">numbers</span><span class="p">[</span><span class="nx">index</span><span class="p">])</span> <span class="p">{</span>
-            <span class="nx">index</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="p">}</span>
-    <span class="p">}</span>  <span class="k">return</span> <span class="nx">index</span>
+<pre class="chroma"><code class="language-Javascript" data-lang="Javascript"><span class="c1">//确定最小数下标
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">minFlag</span> <span class="o">=</span> <span class="p">(</span><span class="nx">strings</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">strings</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">strings</span><span class="p">[</span><span class="nx">flag</span><span class="p">])</span> <span class="p">{</span>
+            <span class="nx">flag</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+        <span class="p">}</span> 
+    <span class="p">}</span>  <span class="k">return</span> <span class="nx">flag</span>
 <span class="p">};</span>
-<span class="kd">let</span> <span class="nx">swap</span> <span class="o">=</span> <span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>   <span class="c1">// 最小 与 第一位换位置
-</span><span class="c1"></span>    <span class="kd">let</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="c1">//交换两数位置
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">swap</span> <span class="o">=</span> <span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
     <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
     <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="kd">function</span> <span class="nx">sort</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">//
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">sort</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="p">(</span><span class="nx">minIndex</span><span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">))</span><span class="o">+</span> <span class="nx">i</span><span class="p">;</span>
+        <span class="c1">//通过slice切片不改变原数组的方法，确定最小值下标，交换至首位
+</span><span class="c1"></span>        <span class="c1">//然后“切除”首位，进行下轮最小筛选，推送至次位，直至排序完成
+</span><span class="c1"></span>        <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">minFlag</span><span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span> <span class="o">+</span> <span class="nx">i</span> <span class="p">;</span> 
         <span class="k">if</span> <span class="p">(</span><span class="nx">index</span> <span class="o">!==</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">swap</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">i</span><span class="p">);</span>
+            <span class="nx">swap</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">i</span> <span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="nx">array</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="kd">let</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kd">let</span>  <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sort</span><span class="p">(</span><span class="nx">array</span><span class="p">))</span>
 </code></pre></td></tr></table></div>
 </div>
@@ -417,6 +425,10 @@
     
     
         <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/tech/220630/" rel="prev">&lt; 从浅谈MVC开始，我眼中的模块化</a>
+                </li>
             
             
                 <li class="post-nav-next">

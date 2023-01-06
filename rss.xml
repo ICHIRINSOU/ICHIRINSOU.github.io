@@ -21,10 +21,58 @@
             <webMaster>evie.hiillos@gmail.com (Hiillos)</webMaster>
         
         
-        <lastBuildDate>Fri, 06 Jan 2023 07:08:07 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 06 Jan 2023 08:06:45 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://ichirinsou.github.io/rss.xml" />
         
+        
+            <item>
+                <title>希望今年自己成为一个有用的「大人」</title>
+                <link>https://ichirinsou.github.io/life/230106/</link>
+                <guid isPermaLink="true">https://ichirinsou.github.io/life/230106/</guid>
+                <pubDate>Fri, 06 Jan 2023 06:43:13 &#43;0800</pubDate>
+                
+                    <author>evie.hiillos@gmail.com (Hiillos)</author>
+                
+                
+                
+                    <description>&lt;p&gt;没有什么好说的，一切都那么普通地进行着。
+我仔细思考了我是什么样的人，能够做什么样的事情，现在我隐隐约约有了答案，暂时也把答案放在了心里。&lt;/p&gt;
+&lt;p&gt;说起来我的预感还蛮准的，一直以来也总被朋友说，熟悉了以后感觉你蛮可怕的，竟然知道我内心在想什么。
+确实我很喜欢揣测别人会怎么想，也总是知道自己在想什么，但是不敢承认。&lt;/p&gt;
+&lt;p&gt;害怕面对一部分的自己吧，既然如此就保持清醒吧，别太早走入这个良夜。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ichirinsou.github.io/images/glance.jpg&#34; alt=&#34;eastern glance&#34; title=&#34;东的一瞥&#34;&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://ichirinsou.github.io/life/">life</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://ichirinsou.github.io/tags/essay/">essay</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>从MVC开始，浅谈我眼中的模块化</title>

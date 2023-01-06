@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">僕と花</title>
     <subtitle type="html">从明天早晨开始，试着去改变世界吧。</subtitle>
-    <updated>2023-01-06T07:08:07&#43;08:00</updated>
+    <updated>2023-01-06T08:06:45&#43;08:00</updated>
     <id>https://ichirinsou.github.io/</id>
     <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://ichirinsou.github.io/atom.xml" />
@@ -16,6 +16,57 @@
             </author>
     
     <generator uri="https://gohugo.io/" version="0.83.1">Hugo</generator>
+        <entry>
+            <title type="text">希望今年自己成为一个有用的「大人」</title>
+            <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/life/230106/" />
+            <id>https://ichirinsou.github.io/life/230106/</id>
+            <updated>2023-01-06T08:06:42&#43;08:00</updated>
+            <published>2023-01-06T06:43:13&#43;08:00</published>
+            <author>
+                    <name>Hiillos</name>
+                    <uri>https://ichirinsou.github.io/</uri>
+                    <email>evie.hiillos@gmail.com</email>
+                    </author>
+            <summary type="html">没有什么好说的，一切都那么普通地进行着。 我仔细思考了我是什么样的人，能够做什么样的事……</summary>
+            
+                <content type="html">&lt;p&gt;没有什么好说的，一切都那么普通地进行着。
+我仔细思考了我是什么样的人，能够做什么样的事情，现在我隐隐约约有了答案，暂时也把答案放在了心里。&lt;/p&gt;
+&lt;p&gt;说起来我的预感还蛮准的，一直以来也总被朋友说，熟悉了以后感觉你蛮可怕的，竟然知道我内心在想什么。
+确实我很喜欢揣测别人会怎么想，也总是知道自己在想什么，但是不敢承认。&lt;/p&gt;
+&lt;p&gt;害怕面对一部分的自己吧，既然如此就保持清醒吧，别太早走入这个良夜。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ichirinsou.github.io/images/glance.jpg&#34; alt=&#34;eastern glance&#34; title=&#34;东的一瞥&#34;&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://ichirinsou.github.io/life/" term="life" label="life" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://ichirinsou.github.io/tags/essay/" term="essay" label="essay" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">从MVC开始，浅谈我眼中的模块化</title>
             <link rel="alternate" type="text/html" href="https://ichirinsou.github.io/tech/220630/" />
